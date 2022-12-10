@@ -3,12 +3,12 @@ import React from "react";
 const Login = () => {
 
 return (
-<div className="">
+<div className="flex flex-col justify-center items-center">
     
 <h1 className="text-3xl m-5 text-center">Join the Movement</h1>
 
-<div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-<form className="flex flex-col gap-4 mt-4 items-center mb-2 border-gray-200 rounded-lg">
+<div className="max-w-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+<form className="flex flex-col gap-4 mt-4 mb-2 px-8 items-center border-gray-200 rounded-lg">
 <div className="signup-name-input">
     <h1>Name</h1>
     <div className="m-2 block">
