@@ -7,7 +7,7 @@ const categorySchema = new Schema(
             required: true,
             unique: true
         },
-        charity: [
+        charities: [
             {
                 type: Schema.Types.ObjectId,
                 ref: "Charity"
