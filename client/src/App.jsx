@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Filter from "./components/Filter";
-import Card from "./components/Card";
+// import Filter from "./components/Filter";
+// import Card from "./components/Card";
+import Login from "./components/Login";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -11,13 +12,13 @@ export default function App() {
       <div className="container mx-auto px-4">
         <div className="py-4">
           <h1 className="text-3xl">
-          Explore
+          {/* Explore */}
           </h1>
         </div>
         
-        <Filter />
-        <Card />
-        <Footer />
+        {/* <Filter />*/}
+        {/* <Card />  */}
+        <Login />
       </div>
     </div>
   );}
