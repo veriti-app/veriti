@@ -6,13 +6,13 @@ const portfolioSchema = new Schema(
                 type: Schema.Types.ObjectId,
                 ref: "User"
             },
-        charity: [
+        charities: [
             {
                 type: Schema.Types.ObjectId,
                 ref: "Charity"
             }
         ],
-        category: [
+        categories: [
             {
                 type: Schema.Types.ObjectId,
                 ref: "Category"
