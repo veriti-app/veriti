@@ -11,14 +11,14 @@ export default function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="container mx-auto px-4">
-        <Header />
-        <Filter />
-        <Card />
-        <Login />
-        <Modal />
-      </div>
+        <div className="container mx-auto px-4">
+          <Header />
+          <Filter />
+          <Card />
+          <Login />
+          <Modal />
+        </div>
       <Footer />
-      </div>
+    </div>
   );
 }
