@@ -6,6 +6,7 @@ import Modal from "./components/Modal"
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Dashboard from "./components/Dashboard";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Navbar />
       <Header />
         <div className="container mx-auto px-1">
+          <Dashboard />
           <Filter />
           <Card />
           <Login />
