@@ -1,4 +1,4 @@
-const { Category, Charity, Donation, Portfolio, User } = require("../models");
+const { Category, Charity, Donation, User } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 const { findOneAndUpdate } = require("../models/Charity");
@@ -16,9 +16,9 @@ const resolvers = {
       return Charity.find();
     },
 
-    // GET one Portfolio
-    portfolio: async (parent, { portfolioId }) => {
-      return Portfolio.findOne({ _id: portfolioId });
+    // GET one User
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id: userId });
     },
 
     // GET all Donations
@@ -54,10 +54,25 @@ const resolvers = {
       throw new AuthenticationError("Not logged in!");
     },
 
-    // PUT login *** TODO: Vaishali?:)
-    login: async () => {},
+    // PUT login
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
 
-    // PUT to portfolio (saving a charity to portfolio)
+      if (!user) {
+        throw new AuthenticationError("No user with this email found!");
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw new AuthenticationError("Incorrect password!");
+      }
+
+      const token = signToken(user);
+      return { token, user };
+    },
+
+    // PUT to user (saving a charity to user)
     saveCharity: async (parent, { charityId }, context) => {
       // find the charity data of one
       const charity = await Charity.findOne({ _id: charityId });
@@ -76,7 +91,7 @@ const resolvers = {
       return updateUserCategories;
     },
 
-    // DELETE from portfolio (unsaving)
+    // DELETE from user (unsaving)
     unsaveCharity: async (parent, { charityId }, context) => {
       const charity = await Charity.findOne({ _id: charityId });
       const updateUserCharity = await User.findOneAndUpdate(
@@ -86,11 +101,6 @@ const resolvers = {
       );
 
       return updateUserCharity;
-      //   return Portfolio.findOneAndUpdate(
-      //     { _id: portfolioId },
-      //     { $pull: { charities: { _id: charityId } } },
-      //     { new: true }
-      //   );
     },
   },
 };

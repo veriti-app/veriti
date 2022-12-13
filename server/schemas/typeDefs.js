@@ -25,13 +25,6 @@ const typeDefs = gql`
     charity: Charity!
   }
 
-  type Portfolio {
-    _id: ID
-    user: User!
-    charities: [Charity]
-    categories: [Category]
-  }
-
   type User {
     _id: ID
     username: String!
@@ -40,18 +33,20 @@ const typeDefs = gql`
   }
 
   type Query {
+    users: [User]
+    user(username: String!): User
     charity(_id: ID!): Charity
     charities: [Charity]
-    portfolio(_id: ID!): Portfolio
     donations: [Donation]
+    me: User
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
-    addDonation(charity: ID!, portfolio: ID!): Donation
+    addDonation(charity: ID!, user: ID!): Donation
     login(email: String!, password: String!): Auth
-    saveCharity(portfolio: ID!, charity: ID!): Portfolio
-    unsaveCharity(portfolio: ID!, charity: ID!): Portfolio
+    saveCharity(user: ID!, charity: ID!): User
+    unsaveCharity(user: ID!, charity: ID!): User
   }
 `;
 
