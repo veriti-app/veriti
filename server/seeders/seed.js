@@ -1,11 +1,9 @@
 const db = require("../config/connection");
 const { Category, Charity, Donation, User } = require("../models");
-const {
-  categorySeeds,
-  charitySeeds,
-  donationSeeds,
-  userSeeds,
-} = require("../seeders");
+const userSeeds = require("./userSeeds.json");
+const donationSeeds = require("./donationSeeds.json");
+const charitySeeds = require("./charitySeeds.json");
+const categorySeeds = require("./categorySeeds.json");
 
 db.once("open", async () => {
   try {
