@@ -6,6 +6,22 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   // QUERY
   Query: {
+    users: async () => {
+      return User.find();
+    },
+
+    user: async (parent, { userId }) => {
+      return User.findOne({ _id: userId });
+    },
+
+    // GET one User
+    me: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOne({ _id: context.user._id });
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+
     // GET one Charity, based on charity id
     charity: async (parent, { charityId }) => {
       return Charity.findOne({ _id: charityId });
@@ -16,11 +32,6 @@ const resolvers = {
       return Charity.find();
     },
 
-    // GET one User
-    user: async (parent, { userId }) => {
-      return User.findOne({ _id: userId });
-    },
-
     // GET all Donations
     donations: async () => {
       return Donation.find();
@@ -29,11 +40,10 @@ const resolvers = {
 
   // MUTATIONS
   Mutation: {
-    // POST new user *** Do we reference AUTH here? TODO: Vaishali check?:)
+    //POST: Adding a new user
     addUser: async (parent, { username, email, password }) => {
-      const user = await User.create(args);
+      const user = await User.create({ username, email, password });
       const token = signToken(user);
-
       return { token, user };
     },
 
@@ -54,7 +64,7 @@ const resolvers = {
       throw new AuthenticationError("Not logged in!");
     },
 
-    // PUT login
+    // PUT login verification
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -62,6 +72,7 @@ const resolvers = {
         throw new AuthenticationError("No user with this email found!");
       }
 
+      // checking password is valid or not
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
