@@ -38,6 +38,7 @@ const typeDefs = gql`
     charity(_id: ID!): Charity
     charities: [Charity]
     donations: [Donation]
+    me: User
   }
 
   type Mutation {
