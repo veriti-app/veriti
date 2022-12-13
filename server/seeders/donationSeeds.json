@@ -1,0 +1,22 @@
+[
+    {
+        "donationAmount": 45,
+        "donationDate": "12/12/22"
+    },
+    {
+        "donationAmount": 20,
+        "donationDate": "12/12/22"
+    },
+    {
+        "donationAmount": 10.99,
+        "donationDate": "12/12/22"
+    },
+    {
+        "donationAmount": 5.99,
+        "donationDate": "12/12/22"
+    },
+    {
+        "donationAmount": 0.99,
+        "donationDate": "12/12/22"
+    }
+]

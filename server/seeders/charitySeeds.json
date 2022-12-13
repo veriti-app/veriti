@@ -1,0 +1,23 @@
+[
+    {
+      "name": "Humane Society",
+      "location": "Atlanta, GA",
+      "mission": "Bringing abandoned pets to new homes.",
+      "link": "www.humanesociety.org",
+      "ein": "22-3333333"
+    },
+    {
+        "name": "Habitat for Humanity",
+        "location": "Atlanta, GA",
+        "mission": "Building homes for people.",
+        "link": "www.habitatforhumanity.org",
+        "ein": "22-4444444"
+      },  
+      {
+        "name": "Save The Children",
+        "location": "Nashville, TN",
+        "mission": "Helping kids.",
+        "link": "www.savethechildren.org",
+        "ein": "22-5555555"
+      }  
+]

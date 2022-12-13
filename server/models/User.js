@@ -18,6 +18,24 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    donations: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Donation",
+      },
+    ],
+    charities: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Charity",
+      },
+    ],
+    categories: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Category",
+      },
+    ],
   },
   // set this to use virtual below
   {
@@ -26,6 +44,8 @@ const userSchema = new Schema(
     },
   }
 );
+
+//
 
 // hash user password
 userSchema.pre("save", async function (next) {
