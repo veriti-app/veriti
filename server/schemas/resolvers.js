@@ -1,7 +1,7 @@
 const { Category, Charity, Donation, User } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
-const { findOneAndUpdate } = require("../models/Charity");
+//const { findOneAndUpdate } = require("../models/Charity");
 
 const resolvers = {
   // QUERY
