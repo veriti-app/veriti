@@ -1,0 +1,42 @@
+[
+    {
+        "username": "biggiver",
+        "email": "coolcat@email.com",
+        "password": "password"
+    },
+    {
+        "username": "smallgiver",
+        "email": "smallcat@email.com",
+        "password": "password1"
+    },
+    {
+        "username": "midgiver",
+        "email": "midcat@email.com",
+        "password": "password2"
+    },
+    {
+        "username": "fatgiver",
+        "email": "fatcat@email.com",
+        "password": "password3"
+    },
+    {
+        "username": "silentgiver",
+        "email": "silentcat@email.com",
+        "password": "password4"
+    },
+    {
+        "username": "mediumgiver",
+        "email": "mediumcat@email.com",
+        "password": "password5"
+    },
+    {
+        "username": "lovelygiver",
+        "email": "lovelycat@email.com",
+        "password": "password6"
+    },
+    {
+        "username": "smellygiver",
+        "email": "smellycat@email.com",
+        "password": "password7"
+    }
+]
