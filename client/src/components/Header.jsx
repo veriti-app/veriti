@@ -10,7 +10,7 @@ function Header() {
                             <img className="rounded-lg " src="https://www.cdc.gov/training/images/1330x370_etsb-training_10-15.png?_=24719" alt="bg" />
                             <div className="mt-8 w-11/12 sm:w-2/3 mb-5 sm:mb-10">
                                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-white font-bold leading-tight">
-                                    Value Your Verity With Your Own Charity Portfilio
+                                    Value Your Verity With Your Own Charity Portfolio
                                     </h1>
                             </div>
                             <div className="flex justify-center items-center mb-10 sm:mb-20">
