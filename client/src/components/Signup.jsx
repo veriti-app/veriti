@@ -1,19 +1,19 @@
 import React from "react";
 
-const Login = () => {
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-  //   try {
-  //     const mutationResponse = await login({
-  //       variables: { email: formState.email, password: formState.password },
-  //     });
-  //     const token = mutationResponse.data.login.token;
-  //     Auth.login(token);
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // };
-  
+const Signup = () => {
+    // const handleFormSubmit = async (event) => {
+    //     event.preventDefault();
+    //     try {
+    //       const mutationResponse = await login({
+    //         variables: { email: formState.email, password: formState.password },
+    //       });
+    //       const token = mutationResponse.data.login.token;
+    //       Auth.login(token);
+    //     } catch (e) {
+    //       console.log(e);
+    //     }
+    //   };
+
 return (
 <div className="flex flex-col justify-center items-center">
     
@@ -21,6 +21,21 @@ return (
 
 <div className="max-w-auto bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
 <form className="flex flex-col gap-4 mt-4 mb-2 px-8 items-center border-gray-200 rounded-lg">
+<div className="signup-name-input">
+    <h1>Name</h1>
+    <div className="m-2 block">
+      <label
+        htmlFor="name1"
+        value="Your name"
+      />
+    </div>
+    <input className="rounded-md"
+      id="name1"
+      type="email"
+      placeholder="John Doe"
+      required={true}
+    />
+  </div>
 
   <div>
     <h1>Email</h1>
@@ -65,4 +80,4 @@ return (
 ); 
 }
 
-export default Login;
+export default Signup;
