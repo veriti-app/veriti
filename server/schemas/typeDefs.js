@@ -19,8 +19,8 @@ const typeDefs = gql`
 
   type Donation {
     _id: ID
-    donationAmount: Number!
-    donationDate: Date
+    donationAmount: Float!
+    donationDate: String
     user: User!
     charity: Charity!
   }
@@ -30,6 +30,12 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
+  }
+
+  # declaring type Auth with it values
+  type Auth {
+    token: ID!
+    user: User
   }
 
   type Query {
