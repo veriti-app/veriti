@@ -11,8 +11,8 @@ export default function App() {
   return (
     <div className="App">
       <Navbar />
-        <div className="container mx-auto px-4">
-          <Header />
+      <Header />
+        <div className="container mx-auto px-1">
           <Filter />
           <Card />
           <Login />
