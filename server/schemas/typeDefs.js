@@ -47,8 +47,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createUser(username: String!, email: String!, password: String!): Auth
-    createDonation(charity: ID!, portfolio: ID!): Donation
+    addUser(username: String!, email: String!, password: String!): Auth
+    addDonation(charity: ID!, portfolio: ID!): Donation
     login(email: String!, password: String!): Auth
     saveCharity(portfolio: ID!, charity: ID!): Portfolio
     unsaveCharity(portfolio: ID!, charity: ID!): Portfolio
