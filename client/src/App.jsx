@@ -3,7 +3,8 @@ import Navbar from "./components/Navbar";
 import Filter from "./components/Filter";
 import Card from "./components/Card";
 import Modal from "./components/Modal"
-import Login from "./components/Login";
+import Login from "../src/components/Login"
+import Signup from "../src/components/Signup"
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Dashboard from "./components/Dashboard";
@@ -17,7 +18,6 @@ export default function App() {
           <Dashboard />
           <Filter />
           <Card />
-          <Login />
           <Modal />
         </div>
       <Footer />
