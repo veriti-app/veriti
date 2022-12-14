@@ -8,7 +8,7 @@ function Nav() {
     if (Auth.loggedIn()) {
       return (
         <div>
-        <ul className="flex flex-row-reverse">
+        <ul>
           <li className="mx-1">
             <Link to="/">
               Home
@@ -29,10 +29,15 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul className="flex p-2">
           <li className="mx-1">
             <Link to="/login">
               Login
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/portfolio">
+              Portfolio
             </Link>
           </li>
         </ul>
@@ -41,14 +46,14 @@ function Nav() {
   }
 
   return (
-    <header className="flex-row px-1">
+    <header className="flex flex-row-reverse">
       <h1>
-      <Link to="/" className="flex items-center">
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">veriti</span>
+      <Link to="/">
+            <span className="self-center text-xl p-2 font-semibold whitespace-nowrap dark:text-white">veriti</span>
         </Link>
       </h1>
 
-      <nav className="flex flex-row">
+      <nav>
         {showNavigation()}
       </nav>
     </header>
