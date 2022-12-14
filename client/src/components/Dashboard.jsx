@@ -14,7 +14,7 @@ const Dashboard = () => {
               Your Top Contribution
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             You've donated ${Math.floor(Math.random() * 1000)} to{" "}
             <span className="mb-1 bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
               Healthcare
@@ -29,7 +29,7 @@ const Dashboard = () => {
               Your Portfolio
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             You've donated to {Math.floor(Math.random() * 10)} categories.
           </p>
         </div>
@@ -39,13 +39,13 @@ const Dashboard = () => {
     <div className="flex flex-wrap flex-row">
         <div className="mx-2 py-2 max-w-sm">
                 <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
                 <span>Download Tax Forms</span>
                 </button>
         </div>
         <div className="mx-2 py-2 max-w-sm">
                 <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
                 <span>Download Donation Summary</span>
                 </button>
         </div>
@@ -68,7 +68,7 @@ const Dashboard = () => {
                                 CDC Foundation
                                 </h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                             </p>
                         <a href="/" className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
@@ -95,7 +95,7 @@ const Dashboard = () => {
                                 CDC Foundation
                                 </h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                             </p>
                         <a href="/" className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
@@ -122,7 +122,7 @@ const Dashboard = () => {
                                 CDC Foundation
                                 </h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                             Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                             </p>
                         <a href="/" className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">

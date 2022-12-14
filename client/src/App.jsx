@@ -1,26 +1,66 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
 import Navbar from "./components/Navbar";
-import Filter from "./components/Filter";
-import Card from "./components/Card";
-import Modal from "./components/Modal"
-import Login from "../src/components/Login"
-import Signup from "../src/components/Signup"
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Dashboard from "./components/Dashboard";
+import Footer from './components/Footer';
+import Home from "./pages/Home"
+import LoginSignup from './pages/LoginSignup';
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
 
 export default function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Header />
-        <div className="container mx-auto px-1">
-          <Dashboard />
-          <Filter />
-          <Card />
-          <Modal />
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Navbar />
+          <Routes>
+          <Route 
+                path="/" 
+                element={<Home />} 
+              />
+            <Route 
+                path="/login" 
+                element={<LoginSignup />} 
+              />
+            {/* <Route 
+                path="/portfolio" 
+                element={<Portfolio />} 
+              /> */}
+              {/* <Route 
+                path="/donation" 
+                element={<Donation />} 
+              /> */}
+          </Routes>
+        <Footer />
         </div>
-      <Footer />
-    </div>
+      </Router>
+    </ApolloProvider>
+    
   );
 }
