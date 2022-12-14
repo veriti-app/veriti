@@ -4,14 +4,12 @@ import Filter from "../components/Filter";
 import Card from "../components/Card";
 import Modal from "../components/Modal"
 import Header from "../components/Header";
-import Dashboard from "../components/Dashboard";
 
-export default function App() {
+export default function Home() {
   return (
-    <div className="App">
+    <div className="home">
       <Header />
         <div className="container mx-auto px-1">
-          <Dashboard />
           <Filter />
           <Card />
           <Modal />
