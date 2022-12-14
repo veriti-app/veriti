@@ -25,7 +25,7 @@ function LoginSignup(props) {
     )
         }
 
-    </div>
+        </div>
     )
 }
 

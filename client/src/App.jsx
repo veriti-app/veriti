@@ -13,6 +13,7 @@ import Portfolio from './pages/Portfolio';
 import Footer from './components/Footer';
 import Home from "./pages/Home"
 import LoginSignup from './pages/LoginSignup';
+import Donation from './pages/Donation';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -52,6 +53,10 @@ export default function App() {
             <Route 
                 path="/portfolio" 
                 element={<Portfolio />} 
+              />
+              <Route 
+                path="/donation" 
+                element={<Donation />} 
               />
           </Routes>
         <Footer />
