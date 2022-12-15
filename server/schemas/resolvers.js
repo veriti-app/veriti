@@ -1,7 +1,6 @@
 const { Category, Charity, Donation, User } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
-//const { findOneAndUpdate } = require("../models/Charity");
 
 const resolvers = {
   // QUERY
@@ -16,7 +15,6 @@ const resolvers = {
 
     // GET one User
     me: async (parent, args, context) => {
-      //console.log("contexxx", context);
       if (context.user) {
         return User.findOne({ _id: context.user._id })
           .populate("donations")
