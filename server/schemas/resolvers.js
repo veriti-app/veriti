@@ -1,7 +1,6 @@
 const { Category, Charity, Donation, User } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
-//const { findOneAndUpdate } = require("../models/Charity");
 
 const resolvers = {
   // QUERY
@@ -17,7 +16,11 @@ const resolvers = {
     // GET one User
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        return User.findOne({ _id: context.user._id })
+          .populate("donations")
+          .populate("charities")
+          .populate("categories")
+          .populate("donations.charity");
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -49,13 +52,22 @@ const resolvers = {
 
     // POST new Donation *** Do we reference charity here? I feel like this one is not correct?
     // We might need to use context: Check 22-State, 22-Stu_Typedefs
-    addDonation: async (parent, { donationAmount, charity, user }, context) => {
-      console.log(`context: ${context}`);
+    addDonation: async (
+      parent,
+      { donationAmount, donationDate, charity },
+      context
+    ) => {
+      //console.log(`context: ${context}`);
       if (context.user) {
-        const donation = new Donation({ charity, donationAmount });
-
-        await User.findByIdAndUpdate(context.user.id, {
-          $push: { donations: donation },
+        const donation = await Donation.create({
+          donationAmount: donationAmount,
+          donationDate: donationDate,
+          user: context.user._id,
+          charity: charity,
+        });
+        console.log("donation", donation);
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { donations: donation._id },
         });
 
         return donation;
@@ -86,13 +98,21 @@ const resolvers = {
     // PUT to user (saving a charity to user)
     saveCharity: async (parent, { charityId }, context) => {
       // find the charity data of one
+
+      // Finding all the info for a charity
       const charity = await Charity.findOne({ _id: charityId });
+
+      //Saving all the categories from the charity found above in variable
       const categoryIds = await charity.categories;
+
+      //Updateing the user to have that charity added to their portfolio
       const updateUserCharity = await User.findOneAndUpdate(
         { _id: context.user._id },
         { $addToSet: { charities: charityId } },
         { new: true }
       );
+
+      //updating the category in the user from the charity that was recently added
       const updateUserCategories = await User.findOneAndUpdate(
         { _id: context.user._id },
         { $addToSet: { categories: [...categoryIds] } },
