@@ -1,11 +1,38 @@
 [
     {
-        "name": "Animals"
+        "name": "Healthcare"
     },
     {
-        "name": "Homelessness"
+        "name": "Disaster Relief"
     },
     {
-        "name": "Children"
+        "name": "Environment"
+    },
+    {
+        "name": "LGBTQ+"
+    },
+    {
+        "name": "Animal Welfare"
+    },
+    {
+        "name": "Education Services"
+    },
+    {
+        "name": "Social/Human Rights"
+    },
+    {
+        "name": "Legal Services"
+    },
+    {
+        "name": "Economic Development"
+    },
+    {
+        "name": "Mental Healthcare"
+    },
+    {
+        "name": "Refugees/Immigration"
+    },
+    {
+        "name": "Public Safety"
     }
 ]

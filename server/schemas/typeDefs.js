@@ -29,6 +29,7 @@ const typeDefs = gql`
     location: String
     mission: String
     link: String
+    imgLink: String
     ein: String
     categories: [Category]!
   }
