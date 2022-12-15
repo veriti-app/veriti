@@ -9,7 +9,7 @@ const Card = () => {
     <div type="card" data-modal-toggle="defaultModal">
       {charities.map((charity) => (
         <div className="flex flex-row flex-wrap">
-          {/* Card 1 */}
+     {/* Card 1 */}
           <div className="mx-1 max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <a href="/">
               <img className="rounded-t-lg" src={charity.imgLink} alt="" />

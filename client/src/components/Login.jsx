@@ -3,18 +3,19 @@ import Auth from "../utils/auth";
 import { useState } from "react";
 import { LOGIN_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
 
-//* Check that this is correct!! 
+//* Check that this is correct!!
 
 const Login = (props) => {
-  const [loginUser, {error, data}] = useMutation(LOGIN_USER);
-  const [userFormData, setUserFormData] = useState({ 
-    email: '', 
-    password: '' 
+  const [loginUser, { error, data }] = useMutation(LOGIN_USER);
+  const [userFormData, setUserFormData] = useState({
+    email: "",
+    password: "",
   });
 
-   // update state based on form input changes
-   const handleChange = (event) => {
+  // update state based on form input changes
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({
       ...userFormData,
@@ -38,8 +39,8 @@ const Login = (props) => {
 
     // clear form values
     setUserFormData({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
   };
 
@@ -61,7 +62,6 @@ return (
               onChange={handleChange}
               value={userFormData.email}
               className="rounded-md"
-              name="email"
               id="email1"
               type="email"
               placeholder="name@mail.com"
@@ -80,7 +80,6 @@ return (
             <input 
               onChange={handleChange}
               value={userFormData.password}
-              name="password"
               className= "rounded-md"
               id="password1"
               type="password"
