@@ -23,8 +23,16 @@ export const ADD_USER = gql`
   }
 `;
 export const ADD_DONATION = gql`
-mutation Mutation($donationAmount: Float!, $donationDate: String!, $charity: ID!) {
-    addDonation(donationAmount: $donationAmount, donationDate: $donationDate, charity: $charity) {
+  mutation Mutation(
+    $donationAmount: Float!
+    $donationDate: String!
+    $charity: ID!
+  ) {
+    addDonation(
+      donationAmount: $donationAmount
+      donationDate: $donationDate
+      charity: $charity
+    ) {
       _id
       charity {
         _id
@@ -44,7 +52,7 @@ mutation Mutation($donationAmount: Float!, $donationDate: String!, $charity: ID!
   }
 `;
 export const SAVE_CHARITY = gql`
-mutation Mutation($charity: ID!) {
+  mutation Mutation($charity: ID!) {
     saveCharity(charity: $charity) {
       _id
       username
@@ -58,7 +66,7 @@ mutation Mutation($charity: ID!) {
   }
 `;
 export const UNSAVE_CHARITY = gql`
-mutation Mutation($user: ID!, $charity: ID!) {
+  mutation Mutation($user: ID!, $charity: ID!) {
     unsaveCharity(user: $user, charity: $charity) {
       _id
       username
