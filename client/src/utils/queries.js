@@ -32,19 +32,15 @@ export const SINGLE_CHARITY = gql`
   }
 `;
 export const ALL_CHARITIES = gql`
-  query Query {
-    charities {
-      _id
-      ein
-      link
-      location
-      mission
-      name
-      categories {
-        _id
-      }
-    }
+query Query {
+  charities {
+    _id
+    ein
+    imgLink
+    link
+    name
   }
+}
 `;
 export const ALL_DONATIONS = gql`
   query Query {

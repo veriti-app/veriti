@@ -61,6 +61,7 @@ return (
               onChange={handleChange}
               value={userFormData.email}
               className="rounded-md"
+              name="email"
               id="email1"
               type="email"
               placeholder="name@mail.com"
@@ -79,6 +80,7 @@ return (
             <input 
               onChange={handleChange}
               value={userFormData.password}
+              name="password"
               className= "rounded-md"
               id="password1"
               type="password"
