@@ -6,6 +6,9 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
+    charities: [Charity]
+    donations: [Donation]
+    categories: [Category]
   }
 
   # declaring type Auth with it values
@@ -33,7 +36,7 @@ const typeDefs = gql`
   type Donation {
     _id: ID
     donationAmount: Float!
-    donationDate: String
+    donationDate: String!
     user: User!
     charity: Charity!
   }
@@ -50,8 +53,12 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addDonation(charity: ID!, user: ID!): Donation
-    saveCharity(user: ID!, charity: ID!): User
+    addDonation(
+      donationAmount: Float!
+      donationDate: String!
+      charity: ID!
+    ): Donation
+    saveCharity(charity: ID!): User
     unsaveCharity(user: ID!, charity: ID!): User
   }
 `;
