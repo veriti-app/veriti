@@ -4,6 +4,7 @@
     "location": "Memphis, TN",
     "mission": "ALSAC (American Lebanese Syrian Associated Charities) was founded in 1957 and exists for the sole purpose of raising funds to support the operating and maintenance of St. Jude Children's Research Hospital. The mission of St. Jude Children's Research Hospital is to find cures for children with cancer and other catastrophic diseases through research and treatment. It is supported primarily by donations raised by ALSAC. ",
     "link": "https://www.stjude.org/",
+    "imgLink": "https://www.stjude.org/content/sites/www/en_US/home/jcr:content/par-1/cnt_mosaic/slide_451255992/defaultImage.img.500.high.jpg/1669902139157.jpg",
     "ein": "35-1044585",
     "categories": ["Healthcare"]
   },
@@ -12,6 +13,7 @@
     "location": "Atlanta, GA",
     "mission": "The CDC Foundation helps the Centers for Disease Control and Prevention (CDC) save and improve lives by unleashing the power of collaboration between CDC, philanthropies, corporations, organizations and individuals to protect the health, safety and security of America and the world. The CDC Foundation is the go-to nonprofit authorized by Congress to mobilize philanthropic partners and private-sector resources to support CDC's critical health protection mission.",
     "link": "https://www.cdcfoundation.org/",
+    "imgLink": "https://www.cdcfoundation.org/sites/default/files/styles/large/public/2021-06/iStock-1220621141.jpg.jpeg?itok=lvf_Mcny",
     "ein": "58-2106707",
     "categories": ["Healthcare", "Public Safety"]
   },
@@ -20,6 +22,7 @@
     "location": "Fairfield, CT",
     "mission": "Save the Children believes every child deserves a future. Since our founding over 100 years ago, we've changed the lives of over 1 billion children. In the United States and around the world, we work every day to give children a healthy start in life, the opportunity to learn and protection from harm. When crisis strikes, and children are most vulnerable, we are always among the first to respond and the last to leave.",
     "link": "https://www.savethechildren.org/",
+    "imgLink": "https://www.savethechildren.org/content/dam/global/images/countries/somalia/somalia-hunger-ahmed-ch1535822-sq.jpg/_jcr_content/renditions/cq5dam.webp_thumbnail.2562.2562.webp",
     "ein": "06-0726487",
     "categories": ["Disaster Relief"]
   },
@@ -28,6 +31,7 @@
     "location": "New York, NY",
     "mission": "Over eight decades, the United Nations Children's Fund (UNICEF) has built an unprecedented global support system for the world's children. UNICEF relentlessly works day in and day out to deliver the essentials that give every child an equitable chance in life: health care and immunizations, safe water and sanitation, nutrition, education, emergency relief and more. UNICEF USA advances the global mission of UNICEF by rallying the American public to support the world's most vulnerable children.",
     "link": "https://www.unicefusa.org/",
+    "imgLink": "https://www.unicefusa.org/sites/default/files/styles/standard_layout_banner/public/field-images/story-banner/2022/UN0640824%20%281%29.jpg.Banner_0.jpg?itok=c1GZsy-l",
     "ein": "13-1760110",
     "categories": ["Disaster Relief"]
   },
@@ -36,6 +40,7 @@
     "location": "New York, NY",
     "mission": "Doctors Without Borders, USA (DWB-USA) was founded in 1990 in New York City to raise funds, create awareness, recruit field staff, and advocate with the United Nations and US government on humanitarian concerns. Doctors Without Borders/Médecins Sans Frontières (MSF) is an international medical humanitarian organization that provides aid in nearly 60 countries to people whose survival is threatened by violence, neglect, or catastrophe, primarily due to armed conflict, epidemics, malnutrition, exclusion from health care, or natural disasters.",
     "link": "https://www.doctorswithoutborders.org/",
+    "imgLink": "https://www.doctorswithoutborders.org/sites/default/files/styles/crop_focus_issues_desktop_/public/image_base_media/2020/04/MSF311836.jpg?itok=RIyiXVhO",
     "ein": "13-3433452",
     "categories": ["Disaster Relief"]
   },
@@ -44,6 +49,7 @@
     "location": "Washington, DC",
     "mission": "Since its founding in 1881 by visionary leader Clara Barton, the American Red Cross has been the nation's premier emergency response organization. We bring shelter, food and comfort to those affected by disasters, large and small. We collect lifesaving donated blood and supply it to patients in need. We provide support to our men and women in military bases around the world, and to the families they leave behind. We train communities in CPR, first aid and other skills that save lives. ",
     "link": "https://www.redcross.org/",
+    "imgLink": "https://www.redcross.org/content/dam/redcross/volunteer/health-svcs-vol_thank-you-sticker_500x400.png.transform/1288/q82/feature/image.png",
     "ein": "53-0196605",
     "categories": ["Disaster Relief"]
   },
@@ -52,6 +58,7 @@
     "location": "Washington, DC",
     "mission": "Founded in 1961, World Wildlife Fund's (WWF) mission is the conservation of nature. Using the best available scientific knowledge and advancing that knowledge where we can, we work to preserve the diversity and abundance of life on Earth and the health of ecological systems by: protecting natural areas and wild populations of plants and animals, including endangered species; promoting sustainable approaches to the use of renewable natural resources; and promoting more efficient use of resources and energy and the maximum reduction of pollution. ",
     "link": "https://www.worldwildlife.org/",
+    "imgLink": "https://files.worldwildlife.org/wwfcmsprod/images/Pandas_204718/story_full_width/87o81dodvo_HI_204718.jpg",
     "ein": "52-1693387",
     "categories": ["Animal Welfare"]
   },
@@ -60,6 +67,7 @@
     "location": "New York, NY",
     "mission": "Founded in 1866, the American Society for the Prevention of Cruelty to Animals (ASPCA) was the first humane organization established in the Americas, and today has more than one million supporters throughout North America. The ASPCA's mission is to provide effective means for the prevention of cruelty to animals throughout the United States. The ASPCA provides local and national leadership in animal-assisted therapy, animal behavior, animal poison control, anti-cruelty, humane education, legislative services, and shelter outreach. ",
     "link": "https://www.aspca.org/",
+    "imgLink": "https://secure.aspca.org/files/aspca/advocacyAlert-Sidebar_HEART-20200124.jpg",
     "ein": "13-1623829",
     "categories": ["Animal Welfare"]
   },
@@ -68,6 +76,7 @@
     "location": "Boston, MA",
     "mission": "Year Up is committed to ensuring equitable access to economic opportunity, education, and justice for all young adults—no matter their background, income, or zip code. Employers face a growing need for talent while millions are left disconnected from the economic mainstream. These inequities only further perpetuate the Opportunity Divide that exists in our country—a divide that Year Up is determined and positioned to close.",
     "link": "https://www.yearup.org/",
+    "imgLink": "https://www.yearup.org/sites/default/files/styles/crop_image_style_16_9/public/2018-12/5-0-hero%402x.jpg?itok=U0H_5dN5",
     "ein": "04-3534407",
     "categories": ["Education Services"]
   },
@@ -76,6 +85,7 @@
     "location": "New York, NY",
     "mission": "The American Civil Liberties Union (ACLU) Foundation is the arm of the ACLU that conducts litigation and communication efforts. The Foundation provides legal presentation in cases involving issues of civil liberties and constitutional rights ranging from administrative hearings to trials and appeals. In addition, the Foundation educates the public as to civil liberties and constitutional rights by disseminating literature and other publications.",
     "link": "https://www.aclu.org/",
+    "imgLink": "https://www.aclu.org/wp-content/uploads/2022/12/Woke_Square-1000x1000.jpg",
     "ein": "13-6213516",
     "categories": ["Social/Human Rights"]
   },
@@ -84,6 +94,7 @@
     "location": "New York, NY",
     "mission": "We are an action platform dedicated to achieving the end of extreme poverty, powered by a community of millions of Global Citizens who believe in one world, one people - where everyone has an equal chance to thrive. This is our world and the actions of one can have a profound impact on many. That's why we rally around the critical issues of climate change, poverty, and inequality.",
     "link": "https://www.globalcitizen.org/en/",
+    "imgLink": "https://media.globalcitizen.org/thumbnails/77/24/7724f4e6-ebb1-4060-a4a8-446e99041f62/istockphoto-1345174155-170667a.jpg__1600x900_q85_crop_subsampling-2.jpg",
     "ein": "42-1772557",
     "categories": ["Social/Human Rights"]
   },
@@ -92,6 +103,7 @@
     "location": "Minneapolis, MN",
     "mission": "Alight exists to walk alongside those who - by sheer circumstance - find themselves on the long and arduous journey of displacement. Each year Alight serves 3.5 million people in over 20 countries who have been displaced by climate, conflict, and social and economic exclusion. We listen closely to their voices, gathering insights that allow us to provide innovative human-centered services and programs.",
     "link": "https://wearealight.org/",
+    "imgLink": "https://wearealight.org/wp-content/uploads/2016/05/IMG_1593.jpg",
     "ein": "36-3241033",
     "categories": ["Refugees/Immigration"]
   },
@@ -100,6 +112,7 @@
     "location": "Norwich, CT",
     "mission": "The mission of the Haitian Health Foundation (HHF) is to improve the health and well-being of women, children, families and communities in Haiti through healthcare, education and community development. HHF brings healthcare services, education, and sustainable development to a population of over 250,000 people in over 100 rural mountain villages. ",
     "link": "https://www.haitianhealthfoundation.org/",
+    "imgLink": "https://www.haitianhealthfoundation.org/wp-content/uploads/2022/05/Children-Eating.jpg",
     "ein": "06-1135999",
     "categories": ["Healthcare"]
   },
@@ -108,6 +121,7 @@
     "location": "Kent, OH",
     "mission": "The Palestine Children's Relief Fund (PCRF) is a non-political organization established in 1991 by concerned people in the U.S. to address the medical and humanitarian crisis facing Palestinian youths in the Middle East. The main objective of the PCRF is to identify and treat every child in the Middle East in need of specialized surgery not available to them locally. We locate, sponsor and run volunteer medical missions to the Middle East in adult and pediatric cardiac surgery, pediatric cardiology, plastic and reconstructive surgery, maxillofacial surgery, pediatric urology, ophthalmology, and other specialties. ",
     "link": "https://www.pcrf.net/",
+    "imgLink": "https://www.pcrf.net/cached_uploads/resize/1500/750/2019/07/18/img-2848-jpg-1563447433.jpg",
     "ein": "93-1057665",
     "categories": ["Healthcare"]
   },
@@ -116,6 +130,7 @@
     "location": "New York, NY",
     "mission": "The Coalition for Rainforest Nations seeks to create sound and long-lasting opportunities for environmental sustainability, social and economic advancement, strengthened capacity and international market reform in a manner that enhances tropical forest stewardship, biodiversity conservation and global climate stability by reversing the destruction of tropical rainforests.",
     "link": "https://www.rainforestcoalition.org/",
+    "imgLink": "https://www.rainforestcoalition.org/wp-content/uploads/2021/03/Deforestation_subpic_C3.jpg",
     "ein": "26-3221530",
     "categories": ["Environment"]
   },
@@ -124,6 +139,7 @@
     "location": "Boston, MA",
     "mission": "Clean Air Task Force is a nonprofit environmental organization that works to help safeguard against the worst impacts of climate change by catalyzing the rapid global development and deployment of low carbon energy and other climate-protecting technologies through research and analysis, public advocacy leadership, and partnership with the private sector. ",
     "link": "https://www.catf.us/",
+    "imgLink": "https://cdn.catf.us/wp-content/uploads/2021/09/21092017/Timeline_BG_Pollution.jpg",
     "ein": "04-3512550",
     "categories": ["Environment"]
   },
@@ -132,6 +148,7 @@
     "location": "Falmouth, MA",
     "mission": "Woodwell Climate Research Center conducts science for solutions at the nexus of climate, people and nature. We partner with leaders and communities for just, meaningful impact to address the climate crisis. For over 35 years, we have combined hands-on experience and policy impact to identify and support societal-scale solutions that can be put into immediate action.",
     "link": "https://www.woodwellclimate.org/",
+    "imgLink": "https://assets-woodwell.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/07/14105456/alaska-566722_1920.jpg",
     "ein": "04-3005094",
     "categories": ["Environment"]
   },
@@ -140,6 +157,7 @@
     "location": "West Hollywood, CA",
     "mission": "The Trevor Project is the world's largest suicide prevention and mental health organization for lesbian, gay, bisexual, transgender, queer & questioning (LGBTQ) young people. The Trevor Project offers a suite of 24/7 crisis intervention and suicide prevention programs, including TrevorLifeline, TrevorText, and TrevorChat as well as the world's largest safe space social networking site for LGBTQ youth, TrevorSpace.",
     "link": "https://www.thetrevorproject.org/",
+    "imgLink": "https://www.thetrevorproject.org/wp-content/uploads/2021/08/Advocacy-2-scaled.jpg",
     "ein": "95-4681287",
     "categories": ["LGBTQ+", "Mental Health Care"]
   },
@@ -148,6 +166,7 @@
     "location": "Washington, DC",
     "mission": "The National Center for Transgender Equality (NCTE) is a national social justice organization devoted to ending discrimination and violence against transgender people through education and advocacy on national issues of importance to transgender people. By empowering transgender people and our allies to educate and influence policymakers and others, NCTE facilitates a strong and clear voice for transgender equality in our nation's capital and around the country.",
     "link": "https://transequality.org/",
+    "imgLink": "https://transequality.org/sites/default/files/styles/issues_270x170/public/images/issues/transgender-human-rights.jpg?itok=LQbF5x_X",
     "ein": "41-2090291",
     "categories": ["LGBTQ+"]
   },
@@ -156,6 +175,7 @@
     "location": "Pasadena, CA",
     "mission": "As a dynamic media force, GLAAD ensures fair, accurate, and inclusive representation that rewrites the script for LGBTQ acceptance. GLAAD tackles tough issues to shape the narrative and provoke dialogue that leads to cultural change. GLAAD protects all that has been accomplished and envisions a world with 100% LGBTQ acceptance.",
     "link": "https://www.glaad.org/",
+    "imgLink": "https://www.glaad.org/sites/default/files/styles/cta_banner_image/public/images/2022-11/flag_0.jpeg",
     "ein": "13-3384027",
     "categories": ["LGBTQ+"]
   },
@@ -164,6 +184,7 @@
     "location": "Rockville, MD",
     "mission": "The Humane League's mission is to exist to end the abuse of animals raised for food. Together, we are here, for the animals. What began as a tiny grassroots organization in 2005 has since grown into an effective and global nonprofit organization. We ran dozens of campaigns, from Baltimore to Boston, and beyond, winning cage-free commitments at every stop.",
     "link": "https://thehumaneleague.org/",
+    "imgLink": "https://images.ctfassets.net/ww1ie0z745y7/6LQMr2rIMJ8jKBFKaJ86Dh/7794c0034a0c955705d1fbbd73bb4fbb/sad-piglet-group-behind-bars-AS.jpg?fm=webp&w=2864&q=75",
     "ein": "04-3817491",
     "categories": ["Animal Welfare"]
   },
@@ -172,6 +193,7 @@
     "location": "Sausalito, CA",
     "mission": "The ocean is in trouble. From the depletion of fish stocks to increasing ocean temperatures, human activity threatens marine ecosystems that are vital to the health of our ocean and all life on earth. As a critical first responder to these threats, The Marine Mammal Center is leading the field in ocean conservation through marine mammal rescue, veterinary medicine, science, and education. ",
     "link": "https://www.marinemammalcenter.org/",
+    "imgLink": "https://www.marinemammalcenter.org/storage/app/uploads/public/6ce/836/80e/thumb__814_636_0_0_crop.jpg",
     "ein": "51-0144434",
     "categories": ["Animal Welfare"]
   },
@@ -180,6 +202,7 @@
     "location": "Washington, DC",
     "mission": "Established in 1987, the Thurgood Marshall College Fund (TMCF) is the nation's largest organization exclusively representing the Black College Community. TMCF member-schools include the publicly-supported Historically Black Colleges and Universities (HBCUs) and Predominantly Black Institutions (PBIs). Publicly-supported HBCUs enroll over 80% of all students attending HBCUs. Through scholarships, capacity building and research initiatives, innovative programs, and strategic partnerships, TMCF is a vital resource in the K-12 and higher education space.",
     "link": "https://www.tmcf.org/",
+    "imgLink": "https://www.tmcf.org/wp-content/uploads/2021/08/students-apple1.jpg",
     "ein": "41-1750692",
     "categories": ["Education Services"]
   },
@@ -188,6 +211,7 @@
     "location": "Oakland, CA",
     "mission": "Urgent Action Fund for Women's Human Rights is a feminist fund that protects, strengthens and sustains women and transgender human rights defenders at critical moments. We intervene quickly when activists are poised to make great gains or face serious threats to their lives and work. We respond to requests from women’s human rights defenders within 72 hours and have funds on the ground within 1-7 days.",
     "link": "https://urgentactionfund.org/",
+    "imgLink": "https://urgentactionfund.org/wp-content/uploads/2012/05/DrRenu.6-1024x650.jpg",
     "ein": "03-0419743",
     "categories": ["Social/Human Rights"]
   },
@@ -196,6 +220,7 @@
     "location": "Ft Washington, MD",
     "mission": "The main objective of Corporate Counsel Women of Color (CCWC) is to promote and advance the professional development of minority women in the legal profession (i.e.recruitment, retention and advancement). CCWC currently serves approximately 4,000 members.",
     "link": "https://ccwomenofcolor.org/",
+    "imgLink": "https://149788163.v2.pressablecdn.com/wp-content/uploads/Workshops.jpg",
     "ein": "36-4559174",
     "categories": ["Legal Services"]
   },
@@ -204,6 +229,7 @@
     "location": "Washington, DC",
     "mission": "Asian Americans Advancing Justice | AAJC is a national nonprofit founded in 1991 to protect civil and human rights. As a national advocate for Asian Americans based in Washington, D.C., we serve our country's newest American community by promoting justice for all Americans, empowering our communities, bringing local and national constituencies together, and ensuring Asian Americans are able to fully participate in our democracy.",
     "link": "https://www.advancingjustice-aajc.org/",
+    "imgLink": "https://www.advancingjustice-aajc.org/sites/default/files/styles/featured660w/public/-_121450%20Jeremy%20Thompson%20%281%29.jpg?itok=FGQWIDnh",
     "ein": "13-3619000",
     "categories": ["Legal Services"]
   },
@@ -212,6 +238,7 @@
     "location": "Washington, DC",
     "mission": "EarthRights is a non-governmental, non-profit organization that combines the power of law with the power of people in defense of human rights and the environment, which we define as “earth rights.” We take legal action against perpetrators of earth rights abuses, train activists, and work with communities to demand meaningful and lasting change.",
     "link": "https://earthrights.org/",
+    "imgLink": "https://earthrights.org/wp-content/uploads/Climate-Protest_080222_07-1024x683.jpeg",
     "ein": "04-3265555",
     "categories": ["Legal Services"]
   },
@@ -220,6 +247,7 @@
     "location": "New York, NY",
     "mission": "LatinoJustice works to create a more just society by using and challenging the rule of law to secure transformative, equitable and accessible justice, by empowering our community and by fostering leadership through advocacy and education. For the past 45+ years, LatinoJustice PRLDEF has litigated precedent-setting impact cases across the country, advocated for the rights of Latinos, fostered civic engagement, and trained Latinx to become leaders in their community. ",
     "link": "https://www.latinojustice.org/en",
+    "imgLink": "https://www.latinojustice.org/sites/default/files/images/causes/fc/_14_Gen_5_Wise_Latinas_Group_Photo_ECONOMIC_J_ANSIVE_LENS_2_0.jpg",
     "ein": "13-2722664",
     "categories": ["Legal Services"]
   },
@@ -228,6 +256,7 @@
     "location": "Somerville, MA",
     "mission": "The mission of the Somerville Homeless Coalition is to provide homeless and nearly homeless individuals and families with individualized supportive services and tailored housing solutions with a goal of obtaining and maintaining affordable housing. We treat all people with dignity and respect, always with the understanding that we are part of one community. ",
     "link": "https://somervillehomelesscoalition.org/",
+    "imgLink": "https://somervillehomelesscoalition.org/wp-content/uploads/2021/03/IMG_6319.jpg",
     "ein": "04-2897447",
     "categories": ["Economic Development"]
   },
@@ -236,6 +265,7 @@
     "location": "New York, NY",
     "mission": "The American Foundation for Suicide Prevention (AFSP) is the leading national not-for-profit organization exclusively dedicated to understanding and preventing suicide through research, education and advocacy, and to reaching out to people with mental disorders and those impacted by suicide.",
     "link": "https://afsp.org/",
+    "imgLink": "https://www.datocms-assets.com/12810/1578180426-nyc-walk-2019.jpg?auto=format&w=600&h=360&crop=faces&fit=crop",
     "ein": "13-3393329",
     "categories": ["Mental Health Care"]
   },
@@ -244,6 +274,7 @@
     "location": "Arlington, VA",
     "mission": "NAMI (National Alliance on Mental Illness) is the nation's largest grassroots organization for people with mental illness and their families. Founded in 1979, NAMI has affiliates in every state and in more than 900 local communities across the country. NAMI recognizes that the key concepts of recovery, resiliency and support are essential to improving the wellness and quality of life of all persons affected by mental illness.",
     "link": "https://www.nami.org/Home",
+    "imgLink": "https://www.nami.org/NAMI/media/NAMI-Redesign/LevelTwoImages/man-in-support-group.jpg",
     "ein": "43-1201653",
     "categories": ["Mental Health Care"]
   },
@@ -252,6 +283,7 @@
     "location": "Maplewood, NJ",
     "mission": "StrongMinds is a social enterprise founded in 2013 that treats depression in low-income women and adolescents by providing group interpersonal therapy (IPT-G), delivered by lay community health workers. StrongMinds is the only organization scaling a cost-effective solution to the depression epidemic in Africa.",
     "link": "https://strongminds.org/",
+    "imgLink": "https://strongminds.org/wp-content/uploads/2022/12/The-future-of-mental-health-care-might-lie-beyond-psychiatry-1000x666.png",
     "ein": "46-2090059",
     "categories": ["Mental Health Care"]
   },
@@ -260,6 +292,7 @@
     "location": "Seattle, WA",
     "mission": "ReWA is a non-profit, multi-ethnic organization that promotes inclusion, independence, personal leadership, and strong communities by providing refugee and immigrant women and their families with culturally and linguistically appropriate services. ReWA advocates for social justice, public policy changes, and equal access to services while respecting cultural values and the right to self-determination.",
     "link": "http://www.rewa.org/",
+    "imgLink": "https://www.rewa.org/wp-content/uploads/2014/06/ESL-Graduation-March-2015-016.jpg",
     "ein": "91-1296964",
     "categories": ["Refugees/Immigration"]
   },
@@ -268,6 +301,7 @@
     "location": "Tucson, AZ",
     "mission": "The Florence Project is a 501(c)(3) nonprofit legal service organization providing free legal and social services to adults and unaccompanied children in immigration custody in Arizona. Although the government assists indigent criminal defendants and civil litigants through public defenders and legal aid attorneys, it does not provide attorneys for people in immigration removal proceedings. As a result, an estimated 86 percent of the detained people go unrepresented due to poverty. The Florence Project strives to address this inequity both locally and nationally through direct service, partnerships with the community, and advocacy and outreach efforts.",
     "link": "https://firrp.org/",
+    "imgLink": "https://firrp.org/wp-content/uploads/2021/03/border-photo-1200x800.jpg",
     "ein": "86-0658103",
     "categories": ["Refugees/Immigration"]
   },
@@ -276,6 +310,7 @@
     "location": "Newtown, CT",
     "mission": "The mission of Sandy Hook Promise is to educate and empower youth and adults to prevent violence in schools, homes, and communities. Through our proven, evidence-informed Know the Signs programs and sensible, bipartisan school and gun safety legislation, we teach young people and adults to recognize, intervene, and get help for individuals who may be socially isolated and/or at risk of hurting themselves or others.",
     "link": "https://www.sandyhookpromise.org/",
+    "imgLink": "https://www.sandyhookpromise.org/wp-content/uploads/2020/06/impact_2.jpg",
     "ein": "46-1657101",
     "categories": ["Public Safety", "Mental Health Care"]
   },
@@ -284,6 +319,7 @@
     "location": "San Francisco, CA",
     "mission": "Our country is in the grip of a gun violence epidemic. Every American will know a victim of gun violence in their lifetime—this is not normal, and it doesn't have to be this way. Giffords is fighting to end the gun lobby's stranglehold on our political system. We're daring to dream what a future free from gun violence looks like. We're going to end this crisis, and we're going to do it together.",
     "link": "https://giffords.org/lawcenter/gun-laws/",
+    "imgLink": "https://euqovsd8nmk.exactdn.com/wp-content/uploads/2020/09/061518_Giffords_RoadToChange_Chicago_IL_CD_1173.jpg?strip=all&lossy=1&w=1920&ssl=1",
     "ein": "46-4638549",
     "categories": ["Public Safety"]
   },
@@ -292,6 +328,7 @@
     "location": "Oakland, CA",
     "mission": "GSA Network is a next-generation LGBTQ racial and gender justice organization that empowers and trains queer, trans and allied youth leaders to advocate, organize, and mobilize an intersectional movement for safer schools and healthier communities.",
     "link": "https://gsanetwork.org/",
+    "imgLink": "https://gsanetwork.org/wp-content/uploads/2019/05/IMG_1632-1024x683.jpg",
     "ein": "20-5367752",
     "categories": ["LGBTQ+"]
   },
@@ -300,6 +337,7 @@
     "location": "Memphis, TN",
     "mission": "We are changing Memphis with programs that focus on ensuring that students are taught the principles of information and computation, how digital systems work, and they learn how to put this knowledge to use through programming and software development concepts. CodeCrew programming includes a number of summer camps, after school programs, in-school electives classes, internships and special events. Since May 2015, we have taught more than 2,000 students to code through our summer camps, after school programs, in-school electives, and special events.",
     "link": "https://www.code-crew.org/",
+    "imgLink": "https://static.wixstatic.com/media/13ef5b_550cae0eefa44d3ba3d74b0f35e65905~mv2_d_2800_1869_s_2.jpg/v1/crop/x_159,y_0,w_2482,h_1869/fill/w_870,h_660,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/cchofc18-0106.jpg",
     "ein": "47-4691807",
     "categories": ["Education Services"]
   },
@@ -308,6 +346,7 @@
     "location": "Tucson, AZ",
     "mission": "Since our start, we have been committed to providing more opportunities for growth and development in our community. Our goal is to help every member of the community get better access to education, healthcare, and sustainable food.",
     "link": "https://www.naafnow.org/",
+    "imgLink": "https://static.wixstatic.com/media/47969f_0bd19a35af0f473c8b6a8498418b75db~mv2.jpg/v1/fit/w_918,h_1146,q_90/47969f_0bd19a35af0f473c8b6a8498418b75db~mv2.webp",
     "ein": "45-2725155",
     "categories": ["Education Services"]
   },
@@ -316,6 +355,7 @@
     "location": "Washington, DC",
     "mission": "NACEDA is an alliance of 38 state and regional community development associations in 25 states and the District of Columbia. Through our members, NACEDA connects with almost 3,500 community development nonprofit organizations throughout the United States. Our mission is to lead the community partners in shaping and influencing strategies that advance community prosperity we advocate for reliable resources and systems that benefit low and moderate income communities and we build the capacity of members and practitioners working in these areas.",
     "link": "https://www.naceda.org/",
+    "imgLink": "https://pbs.twimg.com/media/FjeIhd5X0AEeR67?format=jpg&name=medium",
     "ein": "26-0159736",
     "categories": ["Economic Development"]
   },
@@ -324,6 +364,7 @@
     "location": "Atlanta, GA",
     "mission": "MHA of Georgia is one of the oldest non-profit organization dedicated to enhancing mental health and wellness of Georgians through education, outreach and advocacy. We envision that Georgians will have access to mental wellness resources and thrive in compassionate communities",
     "link": "https://www.mhageorgia.org/",
+    "imgLink": "https://www.mhageorgia.org/wp-content/uploads/2021/09/home-image.jpg",
     "ein": "58-0611310",
     "categories": ["Mental Health Care"]
   },
@@ -332,6 +373,7 @@
     "location": "Seattle, WA",
     "mission": "The Foundation works to ensure that gun violence prevention laws are implemented as intended. We also regularly gather national and local subject matter experts together to share information and discuss the intersectionality of gun violence with a number of research and advocacy issues",
     "link": "https://foundation.gunresponsibility.org/",
+    "imgLink": "https://foundation.gunresponsibility.org/wp-content/uploads/2019/07/washington.png",
     "ein": "46-4601368",
     "categories": []
   },
@@ -340,6 +382,7 @@
     "location": "Brooklyn, NY",
     "mission": "Our mission is to protect every child's right to grow up free from sexual exploitation and trafficking through legislative advocacy, education, and partnerships. As the leading policy organization in the United States seeking to end the commercial, sexual exploitation of children, ECPAT-USA focuses on awareness, advocacy, policy, and legislation.",
     "link": "https://www.ecpatusa.org/",
+    "imgLink": "https://images.squarespace-cdn.com/content/v1/594970e91b631b3571be12e2/1600980830945-Y2PKKU72XZN4JSRH7AVX/rahmani-kresna-621788-unsplash.jpg?format=500w",
     "ein": "13-3755580",
     "categories": ["Public Safety", "Social/Human Rights"]
   },
@@ -348,6 +391,7 @@
     "location": "Atlanta, GA",
     "mission": "AIR's mission is to implement educational programs, reforestation, and regenerative farming methods in Central America in order to protect water sources, build soil health, prevent mudslides and erosion, prevent lung disease and provide more nutritious crops—while protecting the Earth. We choose Hope.",
     "link": "https://www.airguatemala.org/",
+    "imgLink": "https://www.airguatemala.org/assets/images/content/stories3.png",
     "ein": "59-3062311",
     "categories": ["Environment"]
   },
@@ -356,6 +400,7 @@
     "location": "New Haven, CT",
     "mission": "THE ORGANIZATION'S MISSION IS TO INVESTIGATE AND DOCUMENT HUMAN RIGHTS ABUSES IN IRAN, RAISE INTERNATIONAL AWARENESS OF HUMAN RIGHTS VIOLATIONS AND ESTABLISH AN ONLINE ARCHIVE OF HUMAN RIGHTS DOCUMENTS THAT IS ACCESSIBLE TO THE PUBLIC FOR RESEARCH AND EDUCATIONAL PURPOSES.",
     "link": "https://iranhrdc.org/",
+    "imgLink": "https://iranhrdc.org/en/wp-content/uploads/Lordegan-IHRDC.jpg",
     "ein": "20-2744292",
     "categories": ["Social/Human Rights"]
   },
@@ -364,6 +409,7 @@
     "location": "New York, NY",
     "mission": "Today, World Rehabilitation Fund continues its work to transform disability into possibility to ensure that all people, regardless of disability, have the right to participate fully in their communities, to attain education and viable employment. It is our hope that together we can continue and expand these life-changing, innovative and transformative programs which improve the lives of persons with disabilities around the world.",
     "link": "https://www.worldrehabfund.org/",
+    "imgLink": "https://worldrehabfund.org//wp-content/uploads/2014/09/Injured-Refugees-05.jpg",
     "ein": "13-5647844",
     "categories": ["Economic Development"]
   },
@@ -372,6 +418,7 @@
     "location": "Pleasant Hill, CA",
     "mission": "Our volunteer-powered “circle of giving” is a model whereby surplus food & goods are picked up and delivered to neighbors in need, with love and in the spirit of serving selflessly. Our vision is to create a template for giving that can be replicated in other communities. We operate two primary service programs: Food Rescue and the White Pony General Store.",
     "link": "https://www.whiteponyexpress.org/",
+    "imgLink": "https://static.wixstatic.com/media/59a2ca_5424d36ed72249a5828753beb75d8d2b~mv2.jpg/v1/fill/w_1440,h_788,al_c,q_85,enc_auto/59a2ca_5424d36ed72249a5828753beb75d8d2b~mv2.jpg",
     "ein": "46-5220565",
     "categories": ["Economic Development"]
   },
@@ -380,6 +427,7 @@
     "location": "Belmont, MA",
     "mission": "Refugee Protection International offers a scalable, refugee-led model of frontline humanitarian aid. Our mission is to partner with local NGOs and duty bearers to strengthen protection and self-reliance among urban refugees and internally displaced persons (IDPs) near conflict zones through interventions including, but not limited to, innovative housing solutions, civil and residency documentation, and emergency protection assistance.",
     "link": "https://refugeeprotection.org/",
+    "imgLink": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/305967239_401968808774963_3063775864116887567_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=WByuRL48ELMAX_i_RAC&_nc_ht=scontent-lga3-1.xx&oh=00_AfCI33KPA1z83KwRHCZMJEDrQjopUSVlIQ6D13foshfuRg&oe=6398821A",
     "ein": "47-5417614",
     "categories": ["Refugees/Immigration"]
   },
@@ -388,6 +436,7 @@
     "location": "Rockville, MD",
     "mission": "The mission of Rainbow Place is to provide women emergency overnight shelter during the hypothermia season and assist them as they transition to a better quality of life.",
     "link": "https://www.rainbowplace.org/s/",
+    "imgLink": "",
     "ein": "47-5082306",
     "categories": []
   }
