@@ -14,7 +14,7 @@ function Nav() {
           </h1>
           <ul className="flex flex-wrap items-end">
             <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
-              <Link to="/">Home</Link>
+              <Link to="/explore">Explore</Link>
             </li>
             <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
               <Link to="/portfolio">Portfolio</Link>
