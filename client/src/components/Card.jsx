@@ -20,9 +20,10 @@ const Card = () => {
   }
   return (
     <div>
-    <div class="relative inline-block text-left">
-      <label for="category">Choose a car:</label>
-      <select onChange={(event)=> setCategory(event.target.value)} name="category" id="category">
+    <div className="flex flex-col space-y-2 py-4">
+      <label for="category" className="text-grey-600 font-medium">Choose a category</label>
+      <select onChange={(event)=> setCategory(event.target.value)} name="category" id="category" className="rounded-lg bg-white text-indigo-700 font-bold">
+      <option value="">All</option>
       <option value="Healthcare">Healthcare</option>
       <option value="Disaster Relief">Disaster Relief</option>
       <option value="Environment">Environment</option>
@@ -33,7 +34,7 @@ const Card = () => {
     </div>
 
 
-    <div className="flex flex-row flex-wrap">
+    <div className="flex flex-row flex-wrap justify-center space-x-4 space-y-4">
          {Filter(category).map((charity) => (
     <div type="card" data-modal-toggle="defaultModal" key={charity._id}>
         <Modal charityId={charity._id}/>
@@ -43,7 +44,7 @@ const Card = () => {
               <img style={{ height: "200px" }} className="w-full rounded-t-lg object-cover" src={charity.imgLink} alt="" />
             <div className="p-4">
               <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
-                Healthcare
+                {charity.categories[0].name}
               </span>
                 <h5 className="mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {charity.name}
