@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
@@ -14,6 +14,8 @@ import Footer from './components/Footer';
 import Home from "./pages/Home"
 import LoginSignup from './pages/LoginSignup';
 import Donation from './pages/Donation';
+import Checkout from './pages/Checkout';
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -36,6 +38,7 @@ const client = new ApolloClient({
 
 
 export default function App() {
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -57,6 +60,10 @@ export default function App() {
               <Route 
                 path="/donation" 
                 element={<Donation />} 
+              />
+              <Route 
+                path="/checkout" 
+                element={<Checkout />} 
               />
           </Routes>
         <Footer />
