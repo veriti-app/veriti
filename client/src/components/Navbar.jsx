@@ -12,15 +12,23 @@ function Nav() {
               <span className="self-center text-xl p-2 font-bold whitespace-nowrap text-white">veriti</span>
             </Link>
           </h1>
+
           <ul className="flex flex-wrap items-end">
-            <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
-              <Link to="/explore">Explore</Link>
-            </li>
-            <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
             {isLoggedIn ? (
+            <>
               <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
+                <Link to="/explore">Explore</Link>
+              </li>
+              <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
+                <Link to="/portfolio">Portfolio</Link>
+              </li>
+            </>
+            ) : (
+              <></>
+            )}
+            
+            {isLoggedIn ? (
+              <li className="block mt-4 lg:inline-block lg:mt-0 text-white font-bold mr-4">
                 <a href="/" onClick={() => Auth.logout()}>Logout</a>
               </li>
             ) : (
