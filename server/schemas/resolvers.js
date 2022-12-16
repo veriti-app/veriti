@@ -32,7 +32,7 @@ const resolvers = {
 
     // GET all Charities
     charities: async () => {
-      return Charity.find();
+      return Charity.find().populate("categories");
     },
 
     // GET all Donations

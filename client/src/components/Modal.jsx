@@ -8,8 +8,6 @@ const Modal = (props) => {
         variables: {charityId: props.charityId}
     });
     const charity = data?.charities || [];
-    console.log(data);
-    console.log(props);
     return (
 <div>
     {/* Main modal */}

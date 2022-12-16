@@ -1,10 +1,16 @@
 import React from "react";
-import Dashboard from "../components/Dashboard";
+import Summary from "../components/Summary";
+import PortfolioComp from "../components/PortfolioComp";
 
-export default function Portfolio() {
+export default function PortfolioPage() {
     return (
-        <div className="portfolio">
-            <Dashboard />
+        <div className="container mx-auto px-1">
+            <div className="mx-auto px-1">
+                <Summary />
+            </div>
+            <div className="mx-auto px-1">
+                <PortfolioComp />
+            </div>
         </div>
     ); 
 }

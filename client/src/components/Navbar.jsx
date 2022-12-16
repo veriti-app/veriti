@@ -3,60 +3,33 @@ import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 
 function Nav() {
-
-  function showNavigation() {
-    if (Auth.loggedIn()) {
-      return (
-        <div>
-        <ul>
-          <li className="mx-1">
-            <Link to="/">
-              Home
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/portfolio">
-              Portfolio
-            </Link>
-          </li>
-          <li className="mx-1">
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
-          </li>
-        </ul>
-        </div>
-      );
-    } else {
-      return (
-        <ul className="flex p-2">
-          <li className="mx-1">
-            <Link to="/login">
-              Login
-            </Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/portfolio">
-              Portfolio
-            </Link>
-          </li>
-        </ul>
-      );
-    }
-  }
+  const isLoggedIn = Auth.loggedIn();
 
   return (
-    <header className="flex flex-row-reverse">
-      <h1>
-      <Link to="/">
-            <span className="self-center text-xl p-2 font-semibold whitespace-nowrap dark:text-white">veriti</span>
-        </Link>
-      </h1>
-
-      <nav>
-        {showNavigation()}
+      <nav className="flex flex-row-reverse items-center justify-between bg-indigo-700 p-6">
+          <h1>
+            <Link to="/">
+              <span className="self-center text-xl p-2 font-bold whitespace-nowrap text-white">veriti</span>
+            </Link>
+          </h1>
+          <ul className="flex flex-wrap items-end">
+            <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
+              <Link to="/explore">Explore</Link>
+            </li>
+            <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+            {isLoggedIn ? (
+              <li className="block mt-4 lg:inline-block lg:mt-0 text-white hover:font-semibold mr-4">
+                <a href="/" onClick={() => Auth.logout()}>Logout</a>
+              </li>
+            ) : (
+              <li className="block mt-4 lg:inline-block lg:mt-0 text-white font-bold mr-4">
+                <Link to="/login">Login</Link>
+              </li>
+            )}
+          </ul>
       </nav>
-    </header>
   );
 }
 
