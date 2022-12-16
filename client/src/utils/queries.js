@@ -43,6 +43,7 @@ export const ALL_CHARITIES = gql`
       name
       categories {
         _id
+        name
       }
     }
   }

@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ALL_CHARITIES } from "../utils/queries";
 import Modal from "./Modal"; 
@@ -8,32 +8,46 @@ import Modal from "./Modal";
 const Card = () => {
   const { loading, data } = useQuery(ALL_CHARITIES);
   const charities = data?.charities || [];
-  console.log(data); 
+  const [category, setCategory] =useState("");
+  function Filter (category){
+
+    if(category){
+      let newarr = charities.filter(char=> char.categories[0].name === category)
+      return newarr
+    } else {
+      return charities
+    }
+  }
   return (
+    <div>
+    <div class="relative inline-block text-left">
+      <label for="category">Choose a car:</label>
+      <select onChange={(event)=> setCategory(event.target.value)} name="category" id="category">
+      <option value="Healthcare">Healthcare</option>
+      <option value="Disaster Relief">Disaster Relief</option>
+      <option value="Environment">Environment</option>
+      <option value="LGBTQ+">LGBTQ+</option>
+      <option value="Animal Welfare">Animal Welfare</option>
+      {/* add all in */}
+      </select>
+    </div>
+
+
     <div className="flex flex-row flex-wrap">
-         {charities.map((charity) => (
+         {Filter(category).map((charity) => (
     <div type="card" data-modal-toggle="defaultModal" key={charity._id}>
         <Modal charityId={charity._id}/>
         <div>
-     {/* Card 1 */}
+     {/* Card */}
           <div className="max-w-sm w-96 rounded overflow-hidden shadow-lg">
               <img style={{ height: "200px" }} className="w-full rounded-t-lg object-cover" src={charity.imgLink} alt="" />
             <div className="p-5">
               <span className="mb-1 bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
-                Healthcare
+                {charity.categories[0].name}
               </span>
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {charity.name}
                 </h5>
-              {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                {charity.link}
-              </p> */}
-              {/* <Link
-                to={charity.Link}
-                className="mb-3 font-normal text-indigo-400 dark:text-gray-400"
-              >
-              Explore
-              </Link> */}
               <a href={charity.link} className="mb-3 font-normal text-indigo-400 dark:text-gray-400">Explore</a>
               <p className="mb-3 font-normal text-xs text-gray-700 dark:text-gray-400">
                 EIN: {charity.ein}
@@ -54,7 +68,9 @@ const Card = () => {
           </div>
         </div>
     </div>
+    
      ))}
+     </div>
     </div>
   );
 };
