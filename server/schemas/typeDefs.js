@@ -59,8 +59,8 @@ const typeDefs = gql`
       donationDate: String!
       charity: ID!
     ): Donation
-    saveCharity(charity: ID!): User
-    unsaveCharity(user: ID!, charity: ID!): User
+    saveCharity(charityId: ID!): User
+    unsaveCharity(user: ID!, charityId: ID!): User
   }
 `;
 

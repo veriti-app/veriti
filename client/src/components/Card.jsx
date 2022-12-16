@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ALL_CHARITIES } from "../utils/queries";
 import Modal from "./Modal"; 
 
+
 const Card = () => {
   const { loading, data } = useQuery(ALL_CHARITIES);
   const charities = data?.charities || [];
@@ -48,7 +49,6 @@ const Card = () => {
             </div>
           </div>
         </div>
-     
     </div>
      ))}
     </div>
