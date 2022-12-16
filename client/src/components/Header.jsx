@@ -7,8 +7,8 @@ function Header() {
                 style={{ 
                     background: "rgb(238,174,202)",
                     background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
+                    height: "100vh"
                     }}>
-            {/* Code block starts */}
             <dh-component>
                 <div className="w-full px-4">
                     <div className="mt-2 relative rounded-lg container mx-auto flex flex-col items-center pt-12 sm:pt-24 pb-24 sm:pb-32 md:pb-48 lg:pb-56 xl:pb-64">
@@ -30,7 +30,6 @@ function Header() {
                         </div>
                 </div>
             </dh-component>
-            {/* Code block ends */}
         </div>
     )
 }
