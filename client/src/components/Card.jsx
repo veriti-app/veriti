@@ -29,7 +29,13 @@ const Card = () => {
       <option value="Environment">Environment</option>
       <option value="LGBTQ+">LGBTQ+</option>
       <option value="Animal Welfare">Animal Welfare</option>
-      {/* add all in */}
+      <option value="Education Services">Education Services</option>
+      <option value="Social/Human Rights">Social/Human Rights</option>
+      <option value="Legal Services">Legal Services</option>
+      <option value="Economic Development">Economic Development</option>
+      <option value="Mental Healthcare">Mental Healthcare</option>
+      <option value="Refugees/Immigration">Refugees/Immigration</option>
+      <option value="Public Safety">Public Safety</option>
       </select>
     </div>
 
