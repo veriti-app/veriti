@@ -46,7 +46,7 @@ const typeDefs = gql`
     users: [User]!
     user(userId: ID!): User
     me: User
-    charity(_id: ID!): Charity
+    charity(charityId: ID!): Charity
     charities: [Charity]
     donations: [Donation]
   }

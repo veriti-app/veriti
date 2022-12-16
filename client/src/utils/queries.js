@@ -17,8 +17,23 @@ export const SINGLE_USER = gql`
   }
 `;
 export const SINGLE_CHARITY = gql`
-  query Query($id: ID!) {
-    charity(_id: $id) {
+query Query($charityId: ID!) {
+  charity(charityId: $charityId) {
+    _id
+    name
+    link
+    location
+    ein
+    mission
+    categories {
+      _id
+    }
+  }
+}
+`;
+export const ALL_CHARITIES = gql`
+  query Query {
+    charities {
       _id
       ein
       link
@@ -30,17 +45,6 @@ export const SINGLE_CHARITY = gql`
       }
     }
   }
-`;
-export const ALL_CHARITIES = gql`
-query Query {
-  charities {
-    _id
-    ein
-    imgLink
-    link
-    name
-  }
-}
 `;
 export const ALL_DONATIONS = gql`
   query Query {
