@@ -9,7 +9,9 @@ export default function Home() {
   return (
     <div className="home">
       <Header />
-      <Filter />
+      <div className="float-right">
+        <Filter />
+      </div>
       <Card />
       <Modal />
     </div>
