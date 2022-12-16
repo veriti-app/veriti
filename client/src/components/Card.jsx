@@ -2,15 +2,19 @@ import { useQuery } from "@apollo/client";
 import React from "react";
 import { Link } from "react-router-dom";
 import { ALL_CHARITIES } from "../utils/queries";
+import Modal from "./Modal"; 
+
 
 const Card = () => {
   const { loading, data } = useQuery(ALL_CHARITIES);
   const charities = data?.charities || [];
   return (
-    <div type="card" data-modal-toggle="defaultModal">
-      {charities.map((charity) => (
+    <div>
+         {charities.map((charity) => (
+    <div type="card" data-modal-toggle="defaultModal" key={charity._id}>
+        <Modal charityId={charity._id}/>
         <div className="flex flex-row flex-wrap">
-          {/* Card 1 */}
+     {/* Card 1 */}
           <div className="mx-1 max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
             <a href="/">
               <img className="rounded-t-lg" src={charity.imgLink} alt="" />
@@ -45,7 +49,8 @@ const Card = () => {
             </div>
           </div>
         </div>
-      ))}
+    </div>
+     ))}
     </div>
   );
 };
