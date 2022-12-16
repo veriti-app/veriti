@@ -16,24 +16,27 @@ const Card = () => {
         <Modal charityId={charity._id}/>
         <div>
      {/* Card 1 */}
-          <div className="mx-1 max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-            <a href="/">
-              <img height="200px" className="rounded-t-lg object-cover" src={charity.imgLink} alt="" />
-            </a>
+          <div className="max-w-sm w-96 rounded overflow-hidden shadow-lg">
+              <img style={{ height: "200px" }} className="w-full rounded-t-lg object-cover" src={charity.imgLink} alt="" />
             <div className="p-5">
               <span className="mb-1 bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
                 Healthcare
               </span>
-              <a>
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {charity.name}
                 </h5>
-              </a>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              {/* <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                 {charity.link}
-              </p>
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                {charity.ein}
+              </p> */}
+              {/* <Link
+                to={charity.Link}
+                className="mb-3 font-normal text-indigo-400 dark:text-gray-400"
+              >
+              Explore
+              </Link> */}
+              <a href={charity.link} className="mb-3 font-normal text-indigo-400 dark:text-gray-400">Explore</a>
+              <p className="mb-3 font-normal text-xs text-gray-700 dark:text-gray-400">
+                EIN: {charity.ein}
               </p>
               <Link
                 to="/"
