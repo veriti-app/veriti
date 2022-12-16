@@ -37,6 +37,7 @@ export const ALL_CHARITIES = gql`
       _id
       ein
       link
+      imgLink
       location
       mission
       name
