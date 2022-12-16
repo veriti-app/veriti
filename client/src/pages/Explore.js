@@ -7,7 +7,6 @@ import Modal from "../components/Modal"
 const Explore = () => {
     return ( 
         <div className="explore">
-            <h1>Hello</h1>
         <div className="container mx-auto px-1">
           <Filter />
           <Card />
