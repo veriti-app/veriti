@@ -1,7 +1,7 @@
 import React from "react";
 import Summary from "../components/Summary";
 import PortfolioComp from "../components/PortfolioComp";
-import Recommendations from "../components/Recommendations";
+// import Recommendations from "../components/Recommendations";
 
 export default function PortfolioPage() {
   return (
