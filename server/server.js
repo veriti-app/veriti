@@ -1,11 +1,13 @@
+require('dotenv').config();
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
-
 const { typeDefs, resolvers } = require("../server/schemas");
 const db = require("./config/connection");
 const { authMiddleware } = require("./utils/auth");
 
+const STRIPE_KEY = process.env.STRIPE_KEY;
+const stripe = require("stripe")(STRIPE_KEY);
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -35,6 +37,31 @@ const startApolloServer = async (typeDefs, resolvers) => {
     });
   });
 };
+
+app.post("/create-payment-intent", async (req, res) => {
+  const { items } = req.body;
+
+const calculateOrderAmount = (items) => {
+  // Replace this constant with a calculation of the order's amount
+  // Calculate the order total on the server to prevent
+  // people from directly manipulating the amount on the client
+  return 1400;
+};
+
+// Create a PaymentIntent with the order amount and currency
+const paymentIntent = await stripe.paymentIntents.create({
+  amount: calculateOrderAmount(items),
+  currency: "usd",
+  automatic_payment_methods: {
+    enabled: true,
+  },
+});
+
+res.send({
+  clientSecret: paymentIntent.client_secret,
+});
+});
+
 
 // Call the async function to start the server
 startApolloServer(typeDefs, resolvers);
