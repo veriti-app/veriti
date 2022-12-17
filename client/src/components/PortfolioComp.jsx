@@ -11,7 +11,7 @@ const Portfolio = () => {
   const [data] = useState([]);
   if (data.length === 0) {
     return (
-      <div><EmptyState /></div>
+      <div className=""><EmptyState /></div>
     )
   } else {
     return (
