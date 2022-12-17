@@ -1,9 +1,9 @@
 import React from "react";
 
-const Dashboard = () => {
+const Summary = () => {
   return (
     // Dashboard container
-    <div className="container py-8 py-12 bg-indigo-100 overflow-y-hidden rounded-lg">
+    <div className="py-8 py-12 bg-indigo-100 overflow-y-hidden rounded-lg">
         <h1 className="my-2 p-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Summary</h1>
     {/* Summary */}
     <div className="flex flex-wrap flex-row">
@@ -55,4 +55,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Summary;
