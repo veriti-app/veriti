@@ -15,9 +15,9 @@ export default function PortfolioPage() {
           <PortfolioComp />
         </div>
         {/* the Recommendations component is where we populate recommended cards based on what the use saves*/}
-        <div>
+        {/* <div>
           <Recommendations />
-        </div>
+        </div> */}
     </div>
   );
 }

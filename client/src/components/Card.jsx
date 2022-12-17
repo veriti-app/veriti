@@ -1,28 +1,52 @@
-import { useQuery } from "@apollo/client";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useQuery } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import { ALL_CHARITIES } from "../utils/queries";
-import Modal from "./Modal"; 
-
+import { SAVE_CHARITY } from "../utils/mutations";
+import Modal from "./Modal";
 
 const Card = () => {
+  // Create object for save_charity mutation
+  const [saveCharity] = useMutation(SAVE_CHARITY);
+  const [formState, setFormState] = useState({charityId: "",});
   const { data } = useQuery(ALL_CHARITIES);
   const charities = data?.charities || [];
   const [category, setCategory] =useState("");
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  function Filter (category){
-
-    if(category){
-      let newarr = charities.filter(char=> char.categories[0].name === category)
-      return newarr
+  
+  function Filter(category) {
+    if (category) {
+      let newarr = charities.filter(
+        (char) => char.categories[0].name === category
+      );
+      return newarr;
     } else {
-      return charities
+      return charities;
     }
   }
+
+  const handleSubmit = async (event) => {
+    // setting formstate variable
+    const { name, value } = event.target;
+
+    setFormState({ ...formState, [name]: value });
+    try {
+      const chairityData = await saveCharity({
+        variables: { charityId: formState.charityId },
+      });
+
+      if (chairityData.data) {
+        document.getElementById(event.target.id).textContent = "Saved";
+        //storing chairity id key and button state value in local storage
+        localStorage.setItem(event.target.id, "Saved");
+      } else {
+        document.getElementById(event.target.id).textContent = "Save";
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
     <div className="flex flex-col space-y-2 py-4">
@@ -66,17 +90,25 @@ const Card = () => {
                 </p>
             {/* CTAs */}
               <div className="flex flex-row py-2">
-                {/* TODO: Add a "save" card logic here */}
-                <Link
-                to="/"
-                className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                  >Save</Link>
+                {/* Save Button */}
+                <button
+                      id={charity._id}
+                      value={charity._id}
+                      name="charityId"
+                      onClick={handleSubmit}
+                      className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                    >
+                      {/* Checking charityId is available in local storage or not based on that setting button value */}
+                      {localStorage.getItem(charity._id) !== null
+                        ? "Saved"
+                        : "Save"}
+                    </button>
                 {/* TODO: Add a "donate" logic here to donate to right charity_ID */}
                 <Link
                 to="/donation"
                 className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
                   >Donate</Link>
-            {/* Modal Button */}
+                {/* Modal Button */}
                 <Modal charityId={charity._id}/>
                   </div>
               </div>
