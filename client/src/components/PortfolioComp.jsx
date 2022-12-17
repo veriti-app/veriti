@@ -14,6 +14,7 @@ const Portfolio = () => {
       <div className=""><EmptyState /></div>
     )
   } else {
+    // TODO: Insert logic to grab saved charities here
     return (
       <div className="">
 

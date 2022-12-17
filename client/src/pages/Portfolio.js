@@ -5,7 +5,7 @@ import PortfolioComp from "../components/PortfolioComp";
 
 export default function PortfolioPage() {
   return (
-    <div>
+    <div className="portfoliopage">
       {/* the Summary component renders your contributions, how many charities you've donated to and the download buttons */}
       <div>
         <Summary />
