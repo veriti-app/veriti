@@ -43,6 +43,7 @@ export default function App() {
       <Router>
         <div>
           <Navbar />
+          
           <Routes>
             <Route 
                 path="/" 
@@ -65,7 +66,8 @@ export default function App() {
                 element={<Donation />} 
               />
           </Routes>
-        <Footer />
+
+          <Footer />
         </div>
       </Router>
     </ApolloProvider>

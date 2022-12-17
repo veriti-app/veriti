@@ -8,14 +8,13 @@ const CardNoCTA = () => {
 
   return (
     <div>
-      <div className="flex flex-row flex-wrap justify-center space-x-4">
+      <div className="flex flex-row flex-wrap justify-center">
         {charities
-          .filter((item, idx) => idx < 5)
+          .filter((item, idx) => idx < 3)
           .map((charity) => (
             <div type="card" data-modal-toggle="defaultModal" key={charity._id}>
-              <div className="flex flex-row flex-wrap">
-                {/* Card 1 */}
-                <div className="mx-1 max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                {/* Card */}
+                <div className="m-2 max-w-xs bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
                   <img
                     style={{ height: "200px" }}
                     className="w-full rounded-t-lg object-cover"
@@ -34,7 +33,6 @@ const CardNoCTA = () => {
                     </p>
                   </div>
                 </div>
-              </div>
             </div>
           ))}
       </div>

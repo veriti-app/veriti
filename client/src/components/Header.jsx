@@ -4,12 +4,7 @@ import CardNoCTA from "./CardNoCTA"
 
 function Header() {
     return (
-        <div className="py-12 overflow-y-hidden"
-                style={{ 
-                    background: "rgb(238,174,202)",
-                    background: "radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)",
-                    height: "100vh"
-                    }}>
+        <div className="py-12 overflow-y-hidden">
             <dh-component>
                 <div className="w-full px-4 justify-center">
                     <div className="mt-2 relative rounded-lg container mx-auto flex flex-col items-center pt-12 sm:pt-24 pb-24 sm:pb-32 md:pb-48 lg:pb-56 xl:pb-64">
@@ -24,9 +19,7 @@ function Header() {
                             Start Donating Today
                             </Link>
                             </div>
-                        </div>
-                        <div className="justify-center flex px-4 py-6 mt-10 space-x-8">
-                        <CardNoCTA/>
+                            <CardNoCTA/>
                         </div>
                 </div>
             </dh-component>
