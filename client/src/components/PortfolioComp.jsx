@@ -6,6 +6,7 @@ import React, { useState } from "react";
 // import { SAVE_CHARITY } from "../utils/mutations";
 // import CardNoCTA from "./CardNoCTA";
 import EmptyState from "./EmptyState";
+import CardSaved from "../components/CardSaved";
 
 const Portfolio = () => {
   const [data] = useState([]);
@@ -17,7 +18,7 @@ const Portfolio = () => {
     // TODO: Insert logic to grab saved charities here
     return (
       <div className="">
-
+        <CardSaved />
       </div>
     )
   };
