@@ -25,11 +25,11 @@ function Header() {
                             </Link>
                             </div>
                         </div>
+                        <div className="justify-center flex px-4 py-6 mt-10 space-x-8">
+                        <CardNoCTA/>
+                        </div>
                 </div>
             </dh-component>
-            <div className="justify-center flex px-4 py-6 mt-10 space-x-8">
-            <CardNoCTA/>
-            </div>
         </div>
     )
 }
