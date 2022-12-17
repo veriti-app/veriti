@@ -20,7 +20,6 @@ export default function CheckoutForm() {
     }
 
     setIsProcessing(true);
-    // TO-DO: Window Location (Success message)
     const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
