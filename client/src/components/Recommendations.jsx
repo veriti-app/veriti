@@ -2,7 +2,7 @@ import React from "react";
 import CardNoCTA from "./CardNoCTA";
 
 const Recommendations = () => {
-  {/* TODO: Add Recommended cards logic here */}
+  // {/* TODO: Add Recommended cards logic here */}
   // function RecoList() {}
   return (
     <div
