@@ -1,9 +1,8 @@
 import { useQuery } from "@apollo/client";
-import React, { useEffect, useState } from "react";
 import { ALL_CHARITIES } from "../utils/queries";
 
 const CardNoCTA = () => {
-  const { loading, data } = useQuery(ALL_CHARITIES);
+  const { data } = useQuery(ALL_CHARITIES);
   const charities = data?.charities || [];
 
   return (

@@ -43,7 +43,7 @@ export default function App() {
       <Router>
         <div>
           <Navbar />
-          
+
           <Routes>
             <Route 
                 path="/" 
@@ -71,6 +71,5 @@ export default function App() {
         </div>
       </Router>
     </ApolloProvider>
-    
   );
 }
