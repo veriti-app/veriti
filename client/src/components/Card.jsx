@@ -72,6 +72,8 @@ const Card = () => {
                 >
                   Donate
                 </Link>
+
+                <Modal charityId={charity._id}/>
               </div>
             </div>
           </div>
