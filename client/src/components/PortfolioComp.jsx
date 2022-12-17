@@ -14,7 +14,11 @@ const Portfolio = () => {
       <div><EmptyState /></div>
     )
   } else {
-    
+    return (
+      <div className="">
+
+      </div>
+    )
   };
 }
 
