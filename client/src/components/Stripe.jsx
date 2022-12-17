@@ -1,5 +1,5 @@
 import React from "react";
-import CardNoCTA from "./CardNoCTA"
+// import CardCheckOut from "./CardCheckOut";
 
 const Stripe = () => (
   <section>
@@ -9,7 +9,7 @@ const Stripe = () => (
       </button>
       
       <div className="py-6">
-        <CardNoCTA />
+        {/* <CardCheckOut /> */}
     </div>
     </form>
   </section>
