@@ -9,6 +9,11 @@ const Card = () => {
   const { data } = useQuery(ALL_CHARITIES);
   const charities = data?.charities || [];
   const [category, setCategory] =useState("");
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   function Filter (category){
 
     if(category){
@@ -71,7 +76,7 @@ const Card = () => {
                 to="/donation"
                 className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
                   >Donate</Link>
-            {/* Modal Link */}
+            {/* Modal Button */}
                 <Modal charityId={charity._id}/>
                   </div>
               </div>
