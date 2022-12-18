@@ -4,13 +4,12 @@ import { USER_DONATIONS } from "../utils/queries";
 import * as XLSX from "xlsx";
 
 const ExportXlsx = () => {
+  // Extract data from USER_DONATIONS, extract donations from data
   const { data } = useQuery(USER_DONATIONS);
-  // const { me: {donations: {charity: { name, ein }}}} = data
   const donations = data?.me.donations || [];
-  console.log(donations, "Donation Data");
-  // console.log(charities, "Charity Data");
 
-  const filtered = donations.map(obj => {
+  // Extract charity data from donations and return object
+  const charities = donations.map(obj => {
     const {
       charity
     } = obj;
@@ -18,23 +17,27 @@ const ExportXlsx = () => {
     return charity;
   
   });
-  console.log(filtered, "FILTERED")
+  console.log(charities, "FILTERED")
+  console.log(donations, "DONATIONS")
+
+
   const handleOnExport = () => {
     
-    // creating new workbook
+    // creating new xlsx workbook
     var wb = XLSX.utils.book_new(),
-      // converts json data to a spreadsheet - need to pass it the data
-      ws = XLSX.utils.json_to_sheet(filtered);
-
-      
+    
+    // converts donations data and ref last two col
+    ws = XLSX.utils.json_to_sheet(donations)
+    ws['!ref'] = "C1:D7";
+    // ws = XLSX.utils.json_to_sheet(donations);
+    // XLSX.utils.sheet_add_json(ws, ws);
 
     //parameters are workbook, worksheet and sheet name
     XLSX.utils.book_append_sheet(wb, ws, "VeritiDonationSummary");
-    XLSX.write(wb, { bookType: "xlsx", type: "buffer" });
-    XLSX.write(wb, { bookType: "xlsx", type: "binary" });
+    // XLSX.write(wb, { bookType: "xlsx", type: "buffer" });
+    // XLSX.write(wb, { bookType: "xlsx", type: "binary" });
     XLSX.writeFile(wb, "VeritiDonationSummary.xlsx");
-
-    console.log(ws)
+    console.log(ws);
   };
 
   return (
@@ -55,5 +58,6 @@ const ExportXlsx = () => {
     </div>
   );
 };
+
 
 export default ExportXlsx;
