@@ -1,6 +1,7 @@
 const { Charity, Donation, User } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
+const { model } = require("mongoose");
 
 const resolvers = {
   // QUERY 
@@ -17,7 +18,9 @@ const resolvers = {
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id })
-          .populate("donations")
+          .populate({
+            path: "donations",
+            populate: {path: "charity",}})
           .populate("charities")
           .populate("categories")
           .populate("donations.charity");
