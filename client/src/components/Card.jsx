@@ -87,7 +87,7 @@ const Card = () => {
             type="card"
             data-modal-toggle="defaultModal"
             key={charity._id}
-            className="max-w-sm w-96 rounded overflow-hidden shadow-lg rounded-lg"
+            className="max-w-sm w-96 overflow-hidden shadow-lg rounded-lg"
           >
             {/* Image */}
             <img
