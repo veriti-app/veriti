@@ -17,27 +17,41 @@ const ExportXlsx = () => {
     return charity;
   
   });
-  console.log(charities, "FILTERED")
-  console.log(donations, "DONATIONS")
-
+  
+  // Map through donationAmounts
+  const mappedAmounts = donations.map(
+    obj => Object.fromEntries(
+      Object.entries(obj).filter(
+        ([key]) => key.includes("donationAmount")
+      )
+    )
+  );
+  
+  // Map through donationDates
+  const mappedDates = donations.map(
+    obj => Object.fromEntries(
+      Object.entries(obj).filter(
+        ([key]) => key.includes("donationDate")
+      )
+    )
+  );
+  
+  // Merge all data to new array mergedData
+  const mergedAmounts = charities.map((object, i) => Object.assign(mappedAmounts[i], object));
+  const mergedData = mergedAmounts.map((object, i) => Object.assign(mappedDates[i], object));
 
   const handleOnExport = () => {
-    
     // creating new xlsx workbook
     var wb = XLSX.utils.book_new(),
     
-    // converts donations data and ref last two col
-    ws = XLSX.utils.json_to_sheet(donations)
-    ws['!ref'] = "C1:D7";
-    // ws = XLSX.utils.json_to_sheet(donations);
-    // XLSX.utils.sheet_add_json(ws, ws);
-
-    //parameters are workbook, worksheet and sheet name
+    // converts mergedData to xlsx
+    ws = XLSX.utils.json_to_sheet(mergedData)
+    
+    // append sheet to workbook and name VeritiDonationSummary
     XLSX.utils.book_append_sheet(wb, ws, "VeritiDonationSummary");
-    // XLSX.write(wb, { bookType: "xlsx", type: "buffer" });
-    // XLSX.write(wb, { bookType: "xlsx", type: "binary" });
+    
+    // write xlsx file for download
     XLSX.writeFile(wb, "VeritiDonationSummary.xlsx");
-    console.log(ws);
   };
 
   return (
