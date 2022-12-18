@@ -94,12 +94,12 @@ const Login = (props) => {
               </button>
             </div>
             <p className="text-xs m-3 underline">
-              <button
+              <div
                 className="text-xs m-3 underline"
                 onClick={() => props.setLogin(false)}
               >
                 Not a member? Sign up
-              </button>
+              </div>
             </p>
           </form>
         </div>
