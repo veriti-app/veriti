@@ -17,7 +17,7 @@ export const SINGLE_USER = gql`
   }
 `;
 
-// Added query to fetch all chairiites of user
+// Added query to fetch all charities of user
 export const QUERY_ME = gql`
   query Query {
     me {
@@ -49,6 +49,7 @@ export const SINGLE_CHARITY = gql`
     }
   }
 `;
+
 export const ALL_CHARITIES = gql`
   query Query {
     charities {
@@ -66,6 +67,7 @@ export const ALL_CHARITIES = gql`
     }
   }
 `;
+
 export const USER_DONATIONS = gql `
 query Query {
   me {
@@ -81,6 +83,7 @@ query Query {
   }
 }
 `;
+
 export const ALL_DONATIONS = gql`
   query Query {
     donations {

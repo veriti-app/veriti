@@ -4,23 +4,54 @@ import { USER_DONATIONS } from "../utils/queries";
 import * as XLSX from "xlsx";
 
 const ExportXlsx = () => {
+  // Extract data from USER_DONATIONS, extract donations from data
   const { data } = useQuery(USER_DONATIONS);
-  const donations = data?.donations || [];
-  const donationData = data.me.donations;
-  console.log(data)
-  console.log(data.me.donations, "hi!");
+  const donations = data?.me.donations || [];
+
+  // Extract charity data from donations and return object
+  const charities = donations.map(obj => {
+    const {
+      charity
+    } = obj;
+    
+    return charity;
+  
+  });
+  
+  // Map through donationAmounts
+  const mappedAmounts = donations.map(
+    obj => Object.fromEntries(
+      Object.entries(obj).filter(
+        ([key]) => key.includes("donationAmount")
+      )
+    )
+  );
+  
+  // Map through donationDates
+  const mappedDates = donations.map(
+    obj => Object.fromEntries(
+      Object.entries(obj).filter(
+        ([key]) => key.includes("donationDate")
+      )
+    )
+  );
+  
+  // Merge all data to new array mergedData
+  const mergedAmounts = charities.map((object, i) => Object.assign(mappedAmounts[i], object));
+  const mergedData = mergedAmounts.map((object, i) => Object.assign(mappedDates[i], object));
 
   const handleOnExport = () => {
-
-    //creating new workbook
+    // creating new xlsx workbook
     var wb = XLSX.utils.book_new(),
-      //converts json data to a spreadsheet - need to pass it the data
-      ws = XLSX.utils.json_to_sheet(donationData);
-
-    //parameters are workbook, worksheet and sheet name
-    XLSX.utils.book_append_sheet(wb, ws, "TestSheet");
-
-    XLSX.writeFile(wb, "TestSheet.xlsx");
+    
+    // converts mergedData to xlsx
+    ws = XLSX.utils.json_to_sheet(mergedData)
+    
+    // append sheet to workbook and name VeritiDonationSummary
+    XLSX.utils.book_append_sheet(wb, ws, "VeritiDonationSummary");
+    
+    // write xlsx file for download
+    XLSX.writeFile(wb, "VeritiDonationSummary.xlsx");
   };
 
   return (
@@ -41,5 +72,6 @@ const ExportXlsx = () => {
     </div>
   );
 };
+
 
 export default ExportXlsx;
