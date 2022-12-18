@@ -36,6 +36,7 @@ const Card = () => {
     }
   }
 
+  // Saved chairity on backaend and displayed on user portfolio
   const handleSubmit = async (event) => {
     // setting formstate variable
     const { name, value } = event.target;
