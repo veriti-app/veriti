@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { ALL_CHARITIES } from "../utils/queries";
 
-const CardNoCTA = () => {
+const CardCheckOut = () => {
   const { data } = useQuery(ALL_CHARITIES);
   const charities = data?.charities || [];
 
@@ -9,7 +9,7 @@ const CardNoCTA = () => {
     <div>
       <div className="flex flex-row flex-wrap justify-center">
         {charities
-          .filter((item, idx) => idx < 3)
+          .filter()
           .map((charity) => (
             <div type="card" data-modal-toggle="defaultModal" key={charity._id}>
                 {/* Card */}
@@ -39,4 +39,4 @@ const CardNoCTA = () => {
   );
 };
 
-export default CardNoCTA;
+export default CardCheckOut;

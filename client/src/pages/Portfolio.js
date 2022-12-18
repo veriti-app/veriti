@@ -1,11 +1,11 @@
 import React from "react";
 import Summary from "../components/Summary";
 import PortfolioComp from "../components/PortfolioComp";
-import Recommendations from "../components/Recommendations";
+// import Recommendations from "../components/Recommendations";
 
 export default function PortfolioPage() {
   return (
-    <div>
+    <div className="portfoliopage">
       {/* the Summary component renders your contributions, how many charities you've donated to and the download buttons */}
       <div>
         <Summary />
@@ -15,9 +15,9 @@ export default function PortfolioPage() {
           <PortfolioComp />
         </div>
         {/* the Recommendations component is where we populate recommended cards based on what the use saves*/}
-        <div>
+        {/* <div>
           <Recommendations />
-        </div>
+        </div> */}
     </div>
   );
 }

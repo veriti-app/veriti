@@ -52,8 +52,8 @@ export const ADD_DONATION = gql`
   }
 `;
 export const SAVE_CHARITY = gql`
-  mutation Mutation($charity: ID!) {
-    saveCharity(charity: $charity) {
+  mutation Mutation($charityId: ID!) {
+    saveCharity(charityId: $charityId) {
       _id
       username
       categories {

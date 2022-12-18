@@ -49,24 +49,6 @@ const Card = () => {
 
   return (
     <div>
-    <div className="flex flex-col space-y-2 py-4">
-      <label for="category" className="text-grey-600 font-medium">Choose a category</label>
-      <select onChange={(event)=> setCategory(event.target.value)} name="category" id="category" className="rounded-lg bg-white text-indigo-700 font-bold">
-      <option value="">All</option>
-      <option value="Healthcare">Healthcare</option>
-      <option value="Disaster Relief">Disaster Relief</option>
-      <option value="Environment">Environment</option>
-      <option value="LGBTQ+">LGBTQ+</option>
-      <option value="Animal Welfare">Animal Welfare</option>
-      <option value="Education Services">Education Services</option>
-      <option value="Social/Human Rights">Social/Human Rights</option>
-      <option value="Legal Services">Legal Services</option>
-      <option value="Economic Development">Economic Development</option>
-      <option value="Mental Healthcare">Mental Healthcare</option>
-      <option value="Refugees/Immigration">Refugees/Immigration</option>
-      <option value="Public Safety">Public Safety</option>
-      </select>
-    </div>
 
 
     <div className="flex flex-row flex-wrap justify-center">
