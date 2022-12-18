@@ -5,20 +5,36 @@ import * as XLSX from "xlsx";
 
 const ExportXlsx = () => {
   const { data } = useQuery(USER_DONATIONS);
+  // const { me: {donations: {charity: { name, ein }}}} = data
   const donations = data?.me.donations || [];
   console.log(donations, "Donation Data");
+  // console.log(charities, "Charity Data");
 
+  const filtered = donations.map(obj => {
+    const {
+      charity
+    } = obj;
+    
+    return charity;
+  
+  });
+  console.log(filtered, "FILTERED")
   const handleOnExport = () => {
-
-    //creating new workbook
+    
+    // creating new workbook
     var wb = XLSX.utils.book_new(),
-      //converts json data to a spreadsheet - need to pass it the data
-      ws = XLSX.utils.json_to_sheet(donations);
+      // converts json data to a spreadsheet - need to pass it the data
+      ws = XLSX.utils.json_to_sheet(filtered);
+
+      
 
     //parameters are workbook, worksheet and sheet name
     XLSX.utils.book_append_sheet(wb, ws, "VeritiDonationSummary");
-
+    XLSX.write(wb, { bookType: "xlsx", type: "buffer" });
+    XLSX.write(wb, { bookType: "xlsx", type: "binary" });
     XLSX.writeFile(wb, "VeritiDonationSummary.xlsx");
+
+    console.log(ws)
   };
 
   return (
