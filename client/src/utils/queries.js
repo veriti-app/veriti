@@ -48,6 +48,21 @@ export const ALL_CHARITIES = gql`
     }
   }
 `;
+export const USER_DONATIONS = gql `
+query Query {
+  me {
+    donations {
+      charity {
+        name
+        ein
+        _id
+      }
+      donationAmount
+      donationDate
+    }
+  }
+}
+`;
 export const ALL_DONATIONS = gql`
   query Query {
     donations {
