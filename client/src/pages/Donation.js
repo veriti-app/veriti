@@ -3,6 +3,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 
+
 export default function Donation() {
   const [stripePromise, setStripePromise] = useState(null);
   const [clientSecret, setClientSecret] = useState("");
@@ -29,9 +30,9 @@ export default function Donation() {
   }, []);
 
   return (
-    <>
-      <div className="flex flex-col">
-        <h1 className="text-3xl m-5">How much would you like to give?</h1>
+    <div className="flex flex-col-2">
+      <div className="text-center">
+        <h1 className="text-2xl m-5">How much would you like to give?</h1>
         <div>
           <form className="flex flex-col gap-4 ml-6 mb-2 border-gray-200 rounded-lg">
             <div>
@@ -55,6 +56,6 @@ export default function Donation() {
           <CheckoutForm />
         </Elements>
       )}
-    </>
+    </div>
   );
 }

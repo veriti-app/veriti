@@ -82,20 +82,20 @@ const Signup = (props) => {
             />
           </div>
           <div className="m-2">
-            <button
+            <div
               onClick={handleSubmit}
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-indigo-700 rounded-lg hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800"
             >
               Sign up
-            </button>
+            </div>
           </div>
           <p className="text-xs m-3 underline">
-            <button
+            <div
               className="text-xs m-3 underline"
               onClick={() => props.setLogin(true)}
             >
               Already a member? Login here
-            </button>
+            </div>
           </p>
         </form>
       </div>

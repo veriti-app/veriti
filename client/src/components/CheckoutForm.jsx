@@ -4,6 +4,7 @@ import {
   useElements,
   PaymentElement,
 } from "@stripe/react-stripe-js";
+import '../styles/checkout.css'; 
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -40,6 +41,7 @@ export default function CheckoutForm() {
   };
 
   return (
+    <div className="body">
     <form id="payment-form" onSubmit={handleSubmit}>
       <PaymentElement id="payment-element" />
       <button disabled={isProcessing || !stripe || !elements} id="submit">
@@ -50,5 +52,6 @@ export default function CheckoutForm() {
       {/* Show any error or success messages */}
       {message && <div id="payment-message">{message}</div>}
     </form>
+    </div>
   );
 }
