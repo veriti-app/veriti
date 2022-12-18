@@ -5,22 +5,20 @@ import * as XLSX from "xlsx";
 
 const ExportXlsx = () => {
   const { data } = useQuery(USER_DONATIONS);
-  const donations = data?.donations || [];
-  const donationData = data.me.donations;
-  console.log(data)
-  console.log(data.me.donations, "hi!");
+  const donations = data?.me.donations || [];
+  console.log(donations, "Donation Data");
 
   const handleOnExport = () => {
 
     //creating new workbook
     var wb = XLSX.utils.book_new(),
       //converts json data to a spreadsheet - need to pass it the data
-      ws = XLSX.utils.json_to_sheet(donationData);
+      ws = XLSX.utils.json_to_sheet(donations);
 
     //parameters are workbook, worksheet and sheet name
-    XLSX.utils.book_append_sheet(wb, ws, "TestSheet");
+    XLSX.utils.book_append_sheet(wb, ws, "VeritiDonationSummary");
 
-    XLSX.writeFile(wb, "TestSheet.xlsx");
+    XLSX.writeFile(wb, "VeritiDonationSummary.xlsx");
   };
 
   return (
