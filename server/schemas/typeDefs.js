@@ -60,7 +60,7 @@ const typeDefs = gql`
       charity: ID!
     ): Donation
     saveCharity(charityId: ID!): User
-    unsaveCharity(user: ID!, charityId: ID!): User
+    unsaveCharity(charityId: ID!): User
   }
 `;
 

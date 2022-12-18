@@ -16,20 +16,38 @@ export const SINGLE_USER = gql`
     }
   }
 `;
-export const SINGLE_CHARITY = gql`
-query Query($charityId: ID!) {
-  charity(charityId: $charityId) {
-    _id
-    name
-    link
-    location
-    ein
-    mission
-    categories {
+
+// Added query to fetch all chairiites of user
+export const QUERY_ME = gql`
+  query Query {
+    me {
       _id
+      charities {
+        _id
+        link
+        location
+        mission
+        name
+        imgLink
+      }
     }
   }
-}
+`;
+
+export const SINGLE_CHARITY = gql`
+  query Query($charityId: ID!) {
+    charity(charityId: $charityId) {
+      _id
+      name
+      link
+      location
+      ein
+      mission
+      categories {
+        _id
+      }
+    }
+  }
 `;
 export const ALL_CHARITIES = gql`
   query Query {
