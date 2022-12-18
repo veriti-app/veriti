@@ -13,6 +13,7 @@ const Card = () => {
   const [unSaveCharity] = useMutation(UNSAVE_CHARITY);
   const [formState, setFormState] = useState({ charityId: "" });
 
+  // When user click on unsave button chairity is removed from user
   const handleSubmit = async (event) => {
     // setting formstate variable for chairityId
     const { name, value } = event.target;
