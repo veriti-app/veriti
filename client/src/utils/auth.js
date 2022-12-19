@@ -30,7 +30,7 @@ class AuthService {
   login(idToken) {
     localStorage.setItem("id_token", idToken);
     //Redirect to explore page
-    window.location.assign("/explore");
+    window.location.assign("/");
   }
 
   logout() {
