@@ -40,6 +40,7 @@ export const SINGLE_CHARITY = gql`
       _id
       name
       link
+      imgLink
       location
       ein
       mission
