@@ -1,58 +1,50 @@
-# veriti
-
+# veriti&trade; 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
 
-Veriti™ is a MERN stack application that helps givers give responsibly. Donate to funds directly and create a Portfolio for your most liked charities, all while keeping track of your donation history. Next tax season, don't worry about donation calculations. Instead, use Veriti™ to file your charitable donations!
-
-## User Story
-
-```md
-As a person who values donating a portion of my finances
-I want the ability to keep track of my donations,
-explore new charities, and
-easily print out donation info for tax purposes.
-```
-
-#
+Veriti™ is a MERN stack application that allows user to login securely with JWTAuth, explore charities from our curated MongoDB database and add/remove them from their own portfolio. Each portfolio has a user summary and option to download tax forms 1040sa and f8283 for easier filing as well as a Veriti Donation Summary downloadable file in xlsx format. This application was built with Apollo server and uses Express routing. 
 
 ## Table of Contents
+1. [Description](#description)
+2. [Table of Contents](#table-of-contents)
+3. [Usage](#usage)
+4. [Installation](#installation)
+5. [License](#license)
+6. [Technologies](#technologies)
+7. [Future Development](#future-development)
+8. [Contributing](#contributing)
+9. [Tests](#tests)
+10. [Questions](#questions)
 
-- [Technology Used](#technology-used)
-- [Installation](#installation)
-- [How to Use](#how-to-use)
-- [Images](#images)
-- [Future Development](#future-development)
-- [Contributors](#contributors)
-- [Licensing](#licensing)
+## Usage
+### User Story
 
-#
+```md
+AS A person who values donating a portion of my finances
+I WANT the ability to keep track of my donations
+SO THAT I can explore and save new charities, donate to them and export donation data for tax filing
+```
 
-<a name="technology-used"></a>
+## Installation
+To run this application locally: <br/>
+_*this is for development purposes only_
 
-### Technology Used
+1. Pull down and branch this repository
+2. Run ```npm i``` to install all dependencies
+3. Seed the database by running ```npm run seed```
+4. Make sure to import your own Stripe and MongoDB keys
+4. Run the front and back-end servers with ```npm run develop```
 
-This application was built using React for the front end, GraphQL for data queries, Node.js and Express for the server, and MongoDB and the Mongoose ODM for the database. For styling, we used Tailwindcss. For payment, we used Stripe. Other packages include flowbite, xlsx, and concurrently.
+To use this app in production, visit: https://veriti-app.herokuapp.com/
 
-#
+<br/>
 
-<a name="installation"></a>
+The following media shows the application's appearance and functionality: 
 
-### Installation
 
-    1. Clone the respository onto your device via git.
-    2. Make sure you have Node and npm installed and up to date.
-    3. Run 'npm i' in the root directory to install all dependencies.
-    4. TODO ******* How to deal with .env file ******
 
-To run locally...
+https://user-images.githubusercontent.com/107900180/208547170-24e93f2d-f24c-446e-8b6a-811f9942d36f.mp4
 
-    5. Make sure you run 'npm run seed' to seed database.
-    6. Run 'npm run build' to create a build directory of the app.
-    7. Finally, run 'npm run develop', which will concurrently start the server and the react app.
-
-#
-
-<a name="how-to-use"></a>
 
 ### How to Use
 
@@ -81,59 +73,55 @@ To run locally...
         B. You will then be taken to a Stripe checkout page in which you will need to enter payment information.
         C. This donation informaion will be added to your Portfolio page as well as your downloadable spreadsheet!
 
-#
 
-<a name="images"></a>
+## License 
+This project is licensed under the MIT license.
 
-### Images
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.<p />For more information visit [MIT Licensing](https://choosealicense.com/licenses/mit/).
 
-#
 
-<a name="future-development"></a>
+## Technologies
+* MongoDB
+* ExpressJS
+* React
+* NodeJS
+* Apollo
+* GraphQL
+* JWTAuth
+* SheetJS
+* Stripe
+* Bcrypt
+* Dotenv
+* Flowbite
+* Tailwind
+* JavaScript
 
-### Future Development
 
-    1. Home Page
-        A.
-    2. Login/Signup
-        A.
-    3. Explore
-        A.
-    4. Portfolio
-        A.
-    5. Donation
-        A.
-    6. Other
-        A.
+## Future Development
+We would like to continue to add the following functionality to our application:
+* Implement donate/save buttons in Recommendation
+* Storing donation data in back-end
+* Forgot password functionality
+* Category questionnaire for user 
 
-#
 
-<a name="contributors"></a>
+## Contributing
+We'd love for you to contribute! In order to do so, visit [Veriti&trade;](https://github.com/veriti-app/veriti) and fork the repository. We currently require two (2) approvals by our QA team in order to merge to ```main```. <br/><br/> Take a look at our [Future Development](#future-development) section to see what we are looking to expand on (implemented features are denoted with a &check;).
 
-### Contributors
 
-Insha Sayani
+## Tests
+None
 
-- [Github](https://github.com/isayani)
+## Questions
+Find us on Github via the individual links below:
+* [Olivia Conley](https://github.com/oliviaconley)<br>
+* [Indigo Fobes](https://github.com/IndigoFobes)<br>
+* [Annie Nguyen](https://github.com/mnghinguyen)<br>
+* [Vaishali Patel](https://github.com/VaishaliQA)<br>
+* [Insha Sayani](https://github.com/isayani)
 
-Annie Nguyễn
+Or visit our app's repository on GitHub:
+[Veriti&trade;](https://github.com/veriti-app/veriti)
 
-- [Github](https://github.com/mnghinguyen)
-
-Olivia Conley
-
-- [Github](https://github.com/oliviaconley)
-
-Vaishali Patel
-
-- [Github](https://github.com/VaishaliQA)
-
-Indigo Fobes
-
-- [Github](https://github.com/IndigoFobes)
-
-#
-
-<a name="licensing"></a>
-
-### Licensing
+---
+© 2022 veriti&trade; (Olivia Conley, Indigo Fobes, Annie Nguyen, Vaishali Patel, Insha Sayani), Confidential and Proprietary. All Rights Reserved.
