@@ -38,6 +38,7 @@ const Card = () => {
 
   const [category, setCategory] = useState("");
 
+  // Todo : Future Implementation
   // Saved chairity on backaend and displayed on user portfolio
   // const handleSubmit = async (event) => {
   //   // setting formstate variable
