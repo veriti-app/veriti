@@ -1,10 +1,11 @@
-import express, { urlencoded, json } from "express";
-require("dotenv").config();
-import { ApolloServer } from "apollo-server-express";
-import { join } from "path";
-import { typeDefs, resolvers } from "../server/schemas";
-import { once } from "./config/connection";
-import { authMiddleware } from "./utils/auth";
+const env = require("dotenv").config();
+const express = require("express");
+const { ApolloServer } = require("apollo-server-express");
+const path = require("path");
+const { typeDefs, resolvers } = require("../server/schemas");
+const db = require("./config/connection");
+const { authMiddleware } = require("./utils/auth");
+const e = require("express");
 const STRIPE_KEY = process.env.STRIPE_SECRET;
 const stripe = require("stripe")(STRIPE_KEY);
 
@@ -16,11 +17,11 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
-app.use(urlencoded({ extended: false }));
-app.use(json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
-  app.use(static(join(__dirname, "../client/build")));
+  app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
 // Stripe Integration
@@ -55,7 +56,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
   server.applyMiddleware({ app });
 
-  once("open", () => {
+  db.once("open", () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
       console.log(
