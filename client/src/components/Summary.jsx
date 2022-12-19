@@ -2,25 +2,21 @@ import React from "react";
 import DownloadXlsx from "./DownloadXlsx";
 import { useQuery } from "@apollo/client";
 import { USER_SUMMARY } from "../utils/queries";
+
 const Summary = () => {
   // Extract data from USER_SUMMARY
   const { data } = useQuery(USER_SUMMARY);
   const donations = data?.me.donations || [];
   const categories = data?.me.categories || [];
-  console.log("DONATIONS", donations);
-  console.log("CATEGORIES", categories);
 
   // Total categories calculation
   const categoryLength = categories.length;
 
-  
-
-  // Extract charity data from donations and return object
-  const charities = donations.map((obj) => {
-    const { charity } = obj;
-
-    return charity;
-  });
+  // Total donation spent
+  const donationTotal = donations.reduce(
+    (total, obj) => obj.donationAmount + total,
+    0
+  );
 
   return (
     // Dashboard container
@@ -38,9 +34,9 @@ const Summary = () => {
               </h5>
             </a>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              You've donated ${Math.floor(Math.random() * 1000)} to{" "}
-              <span className="mb-1 bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
-                Healthcare
+              You've donated a total of{" "}
+              <span className="mb-1 bg-indigo-100 text-indigo-800 text-s font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
+                ${donationTotal}
               </span>
             </p>
           </div>
@@ -53,7 +49,7 @@ const Summary = () => {
               </h5>
             </a>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              You've donated to {categoryLength} categories.
+              You've donated across {categoryLength} categories.
             </p>
           </div>
         </div>
