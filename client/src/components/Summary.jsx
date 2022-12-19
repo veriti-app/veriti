@@ -1,7 +1,27 @@
 import React from "react";
 import DownloadXlsx from "./DownloadXlsx";
-
+import { useQuery } from "@apollo/client";
+import { USER_SUMMARY } from "../utils/queries";
 const Summary = () => {
+  // Extract data from USER_SUMMARY
+  const { data } = useQuery(USER_SUMMARY);
+  const donations = data?.me.donations || [];
+  const categories = data?.me.categories || [];
+  console.log("DONATIONS", donations);
+  console.log("CATEGORIES", categories);
+
+  // Total categories calculation
+  const categoryLength = categories.length;
+
+  
+
+  // Extract charity data from donations and return object
+  const charities = donations.map((obj) => {
+    const { charity } = obj;
+
+    return charity;
+  });
+
   return (
     // Dashboard container
     <div className="bg-indigo-100 rounded-lg px-4">
@@ -33,7 +53,7 @@ const Summary = () => {
               </h5>
             </a>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              You've donated to {Math.floor(Math.random() * 10)} categories.
+              You've donated to {categoryLength} categories.
             </p>
           </div>
         </div>
@@ -54,10 +74,9 @@ const Summary = () => {
           </button>
         </div>
         <div className="max-w-sm">
-            <span>
-              <DownloadXlsx />
-            </span>
-         
+          <span>
+            <DownloadXlsx />
+          </span>
         </div>
       </div>
     </div>
