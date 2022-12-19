@@ -38,6 +38,10 @@ export default function CheckoutForm() {
     }
 
     setIsProcessing(false);
+
+    setTimeout(function(){
+      window.location.href = `${window.location.origin}/portfolio`;
+   }, 3000);
   };
 
   return (

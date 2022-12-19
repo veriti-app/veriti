@@ -4,6 +4,7 @@ import { QUERY_ME } from "../utils/queries";
 import Modal from "./Modal";
 import { UNSAVE_CHARITY } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   // usequery for get all chairities for login in user
@@ -32,7 +33,7 @@ const Card = () => {
 
   const handleDonation = async (event) => {
     localStorage.setItem("current-charity", event.target.value);
-    window.location.replace("/donation");
+    // window.location.replace("/donation");
   };
 
   return (
