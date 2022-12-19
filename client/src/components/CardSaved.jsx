@@ -37,7 +37,7 @@ const Card = () => {
 
   return (
     <div>
-      <div className=" flex flex-row flex-wrap gap-8 content-center">
+      <div className=" flex flex-row flex-wrap gap-8 justify-center">
         {/* Filter Applied */}
         {charities.map((charity) => (
           // Card
@@ -74,29 +74,33 @@ const Card = () => {
                 </p>
               </div>
               {/* CTAs */}
-              <div className="flex flex-row py-2">
-                {/* Save Button */}
-                <button
-                  id={charity._id}
-                  value={charity._id}
-                  name="charityId"
-                  onClick={handleSubmit}
-                  className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
-                >
-                  Unsave
-                </button>
+              <div className="flex flex-col md:flex-row lg:flex-row pb-4 justify-center">
+                <div className="flex flex-row">
+                  {/* Save Button */}
+                  <button
+                    id={charity._id}
+                    value={charity._id}
+                    name="charityId"
+                    onClick={handleSubmit}
+                    className="py-3 md:py-4 lg:py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                  >
+                    Unsave
+                  </button>
 
-                <button
-                  id="donation"
-                  value={charity._id}
-                  name="chairityId"
-                  onClick={handleDonation}
-                  className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
-                >
-                  Donate
-                </button>
+                  <button
+                    id="donation"
+                    value={charity._id}
+                    name="chairityId"
+                    onClick={handleDonation}
+                    className="py-3 md:py-4 lg:py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                  >
+                    Donate
+                  </button>
+                </div>
                 {/* Modal Button */}
-                <Modal charityId={charity._id} />
+                <div>
+                  <Modal charityId={charity._id} />
+                </div>
               </div>
             </div>
           </div>

@@ -110,7 +110,7 @@ const Card = () => {
                 <span className="self-center justify-self-auto bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
                   {charity.categories[0].name}
                 </span>
-                <h5 className="mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="mt-4 mb-2 text-xl md:text-2xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   {charity.name}
                 </h5>
                 <a
@@ -124,28 +124,32 @@ const Card = () => {
                 </p>
               </div>
               {/* CTAs */}
-              <div className="flex flex-row pb-6">
-                {/* Save Button */}
-                <button
-                  id={charity._id}
-                  value={charity._id}
-                  name="charityId"
-                  onClick={handleSubmit}
-                  className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
-                >
-                  {/* Set value of button dynamically based on user chairity */}
-                  {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
-                </button>
-                {/* Data attribute data-charityId, a way to save data within elements */}
-                <button
-                  onClick={handleDonation}
-                  className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
-                  data-charityId={charity._id}
-                >
-                  Donate
-                </button>
+              <div className="flex flex-col md:flex-row lg:flex-row pb-4 justify-center ">
+                <div className="flex flex-row">
+                  {/* Save Button */}
+                  <button
+                    id={charity._id}
+                    value={charity._id}
+                    name="charityId"
+                    onClick={handleSubmit}
+                    className="py-3 md:py-4 lg:py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                  >
+                    {/* Set value of button dynamically based on user chairity */}
+                    {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
+                  </button>
+                  {/* Data attribute data-charityId, a way to save data within elements */}
+                  <button
+                    onClick={handleDonation}
+                    className="py-3 md:py-4 lg:py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                    data-charityId={charity._id}
+                  >
+                    Donate
+                  </button>
+                </div>
                 {/* Modal Button */}
-                <Modal charityId={charity._id} />
+                <div>
+                  <Modal charityId={charity._id} />
+                </div>
               </div>
             </div>
           </div>
