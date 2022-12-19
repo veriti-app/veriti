@@ -136,7 +136,8 @@ const Card = () => {
                   {/* Set value of button dynamically based on user chairity */}
                   {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
                 </button>
-                {/* Data attribute data-charityId, a way to save data within elements */}
+                {/* Data attribute data-charityId, a way to save data within elements*/}
+                {/* Added Link button to route donation page*/}
                 <Link to="/donation">
                   <button
                     onClick={handleDonation}

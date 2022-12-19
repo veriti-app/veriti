@@ -6,7 +6,7 @@ import Recommendations from "../components/Recommendations";
 export default function PortfolioPage() {
   return (
     <div className="portfoliopage">
-      {/* the summary component renders your contributions, how many charities you've donated to and the download buttons */}
+      {/* the Summary omponent renders your contributions, how many charities you've donated to and the download buttons */}
       <div>
         <Summary />
       </div>

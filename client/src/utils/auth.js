@@ -29,7 +29,7 @@ class AuthService {
 
   login(idToken) {
     localStorage.setItem("id_token", idToken);
-    //Redirect to main page
+    //redirect to main page
     window.location.assign("/");
   }
 
