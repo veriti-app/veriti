@@ -27,13 +27,13 @@ export default function Modal() {
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text-3xl font-semibold">
-                    {charity}
+                    {charity.name}
                   </h3>
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    content
+                    {charity.mission}
                   </p>
                 </div>
                 {/*footer*/}
