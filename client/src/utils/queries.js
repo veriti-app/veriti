@@ -26,6 +26,7 @@ export const QUERY_ME = gql`
         _id
         link
         location
+        ein
         mission
         name
         imgLink
