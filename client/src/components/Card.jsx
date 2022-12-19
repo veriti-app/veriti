@@ -4,6 +4,7 @@ import { QUERY_ME, ALL_CHARITIES } from "../utils/queries";
 import { SAVE_CHARITY } from "../utils/mutations";
 import Modal from "./Modal";
 import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   // Get logged in user charities
@@ -51,12 +52,13 @@ const Card = () => {
   };
 
   const handleDonation = async (event) => {
-    console.log(event.target.getAttribute("data-charityId"));
+    console.log("called", event.target.getAttribute("data-charityId"));
     // targeting the data atrribute for charityId
     let currentCharityId = event.target.getAttribute("data-charityId");
     // setting to local storage (key, value)
     localStorage.setItem("current-charity", currentCharityId);
-    window.location.replace("/donation");
+
+    //window.location.replace("/donation");
   };
 
   return (
@@ -134,14 +136,18 @@ const Card = () => {
                   {/* Set value of button dynamically based on user chairity */}
                   {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
                 </button>
-                {/* Data attribute data-charityId, a way to save data within elements */}
-                <button
-                  onClick={handleDonation}
-                  className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
-                  data-charityId={charity._id}
-                >
-                  Donate
-                </button>
+                {/* Data attribute data-charityId, a way to save data within elements*/}
+                {/* Added Link button to route donation page*/}
+                <Link to="/donation">
+                  <button
+                    onClick={handleDonation}
+                    className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                    data-charityId={charity._id}
+                  >
+                    Donate
+                  </button>
+                </Link>
+
                 {/* Modal Button */}
                 <Modal charityId={charity._id} />
               </div>

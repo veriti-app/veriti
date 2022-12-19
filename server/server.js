@@ -1,4 +1,4 @@
-const env = require("dotenv").config({ path: "./.env" });
+const env = require("dotenv").config();
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === "production") {
 // Stripe Integration
 app.get("/config", (req, res) => {
   res.send({
-    publishableKey: process.env.STRIPE_PUBLISHABLE,
+    publishableKey: `${process.env.STRIPE_PUBLISHABLE}`,
   });
 });
 
