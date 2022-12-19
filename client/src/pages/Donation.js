@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
+import CardCheckOut from "../components/CardCheckOut";
 import { Elements } from "@stripe/react-stripe-js";
 
 
@@ -24,7 +25,6 @@ export default function Donation() {
       const { clientSecret } = await r.json();
 
       setClientSecret(clientSecret);
-      console.log("RESPONSE", r);
       return r;
     });
   }, []);
@@ -49,6 +49,9 @@ export default function Donation() {
               />
             </div>
           </form>
+        </div>
+        <div>
+          <CardCheckOut />
         </div>
       </div>
       {stripePromise && clientSecret && (

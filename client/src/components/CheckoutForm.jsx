@@ -51,6 +51,7 @@ export default function CheckoutForm() {
       </button>
       {/* Show any error or success messages */}
       {message && <div id="payment-message">{message}</div>}
+      {/*TODO:  Need to redirect to homepage after this */}
     </form>
     </div>
   );
