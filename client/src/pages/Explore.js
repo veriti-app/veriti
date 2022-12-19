@@ -9,7 +9,6 @@ const Explore = () => {
         <div className="container mx-auto px-1">
 
           <Card />
-          <Modal />
         </div>
     </div>
      );

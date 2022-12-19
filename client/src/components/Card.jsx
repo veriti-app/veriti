@@ -51,6 +51,15 @@ const Card = () => {
     }
   };
 
+  const handleDonation = async (event) => {
+    console.log(event.target.getAttribute("data-charityId"));
+    // targeting the data atrribute for charityId
+    let currentCharityId = event.target.getAttribute("data-charityId");
+    // setting to local storage (key, value)
+    localStorage.setItem("current-charity", currentCharityId);
+    window.location.replace("/donation");
+  };
+
   return (
     <div>
       <div className="flex flex-col space-y-2 py-4">
@@ -87,7 +96,7 @@ const Card = () => {
             type="card"
             data-modal-toggle="defaultModal"
             key={charity._id}
-            className="max-w-sm w-96 rounded overflow-hidden shadow-lg rounded-lg"
+            className="max-w-sm w-96 overflow-hidden shadow-lg rounded-lg"
           >
             {/* Image */}
             <img
@@ -126,13 +135,14 @@ const Card = () => {
                   {/* Set value of button dynamically based on user chairity */}
                   {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
                 </button>
-                {/* TODO: Add a "donate" logic here to donate to right charity_ID */}
-                <Link
-                  to="/donation"
+                {/* Data attribute data-charityId, a way to save data within elements */}
+                <button
+                  onClick={handleDonation}
                   className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                  data-charityId={charity._id}
                 >
                   Donate
-                </Link>
+                </button>
                 {/* Modal Button */}
                 <Modal charityId={charity._id} />
               </div>

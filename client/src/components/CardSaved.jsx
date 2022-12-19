@@ -31,6 +31,11 @@ const Card = () => {
     }
   };
 
+  const handleDonation = async (event) => {
+    localStorage.setItem("current-charity", event.target.value);
+    window.location.replace("/donation");
+  };
+
   return (
     <div>
       <div className="flex flex-row flex-wrap justify-center justify-between space-y-4">
@@ -83,12 +88,15 @@ const Card = () => {
                   Unsave
                 </button>
                 {/* TODO: Add a "donate" logic here to donate to right charity_ID */}
-                <Link
-                  to="/donation"
+                <button
+                  id="donation"
+                  value={charity._id}
+                  name="chairityId"
+                  onClick={handleDonation}
                   className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
                 >
                   Donate
-                </Link>
+                </button>
                 {/* Modal Button */}
                 <Modal charityId={charity._id} />
               </div>

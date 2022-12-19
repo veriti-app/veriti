@@ -26,6 +26,7 @@ export const QUERY_ME = gql`
         _id
         link
         location
+        ein
         mission
         name
         imgLink
@@ -40,6 +41,7 @@ export const SINGLE_CHARITY = gql`
       _id
       name
       link
+      imgLink
       location
       ein
       mission
