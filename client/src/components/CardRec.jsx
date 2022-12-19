@@ -22,19 +22,21 @@ const Card = () => {
   const [saveCharity] = useMutation(SAVE_CHARITY);
   const [formState, setFormState] = useState({ charityId: "" });
   const { data } = useQuery(ALL_CHARITIES);
-  const charities = data?.charities || [];
-  const [category, setCategory] = useState("");
-
-  function Filter(category) {
-    if (category) {
-      let newarr = charities.filter(
-        (char) => char.categories[0].name === category
-      );
-      return newarr;
-    } else {
-      return charities;
-    }
+  var charities = data?.charities || [];
+  //Generate random 9 number from 1 to 49
+  var arr = [];
+  while (arr.length < 9) {
+    var r = Math.floor(Math.random() * 49);
+    if (arr.indexOf(r) === -1) arr.push(r);
   }
+  // Filterd random 9 chairities from 49
+  var filterCharities = [];
+  arr.forEach(myFunction);
+  function myFunction(arrIndex) {
+    filterCharities.push(charities[arrIndex]);
+  }
+
+  const [category, setCategory] = useState("");
 
   // Saved chairity on backaend and displayed on user portfolio
   const handleSubmit = async (event) => {
@@ -54,10 +56,8 @@ const Card = () => {
   return (
     <div>
       <div className="flex flex-row flex-wrap justify-center justify-between space-y-4">
-        {/* Filter Applied */}
-        {charities
-        .filter((item, idx) => idx < 8)
-        .map((charity) => (
+        {/* use map loop for chairities */}
+        {filterCharities.map((charity) => (
           // Card
           <div
             type="card"
