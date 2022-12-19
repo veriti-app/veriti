@@ -41,7 +41,7 @@ const Card = () => {
             type="card"
             data-modal-toggle="defaultModal"
             key={charity._id}
-            className="max-w-sm rounded overflow-hidden shadow-lg rounded-lg"
+            className="max-w-sm w-90 rounded overflow-hidden shadow-lg rounded-lg"
           >
             {/* Image */}
             <img
@@ -68,7 +68,7 @@ const Card = () => {
                 EIN: {charity.ein}
               </p>
               <p className="font-normal text-xs text-gray-700 dark:text-gray-400">
-                Location: {charity.location}
+                {charity.location}
               </p>
               {/* CTAs */}
               <div className="flex flex-row py-2">
