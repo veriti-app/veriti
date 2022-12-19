@@ -4,7 +4,7 @@ const { signToken } = require("../utils/auth");
 const { model } = require("mongoose");
 
 const resolvers = {
-  // QUERY 
+  // QUERY
   Query: {
     users: async () => {
       return User.find();
@@ -20,10 +20,14 @@ const resolvers = {
         return User.findOne({ _id: context.user._id })
           .populate({
             path: "donations",
-            populate: {path: "charity",}})
+            populate: { path: "charity" },
+          })
           .populate("charities")
           .populate("categories")
-          .populate("donations.charity");
+          .populate({
+            path: "donations.charity",
+            populate: { path: "category" },
+          });
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -59,7 +63,6 @@ const resolvers = {
       { donationAmount, donationDate, charity },
       context
     ) => {
-      
       if (context.user) {
         const donation = await Donation.create({
           donationAmount: donationAmount,
@@ -99,7 +102,6 @@ const resolvers = {
 
     // PUT Save Charity to User
     saveCharity: async (parent, { charityId }, context) => {
-
       // Finding all the info for a charity
       const charity = await Charity.findOne({ _id: charityId });
 

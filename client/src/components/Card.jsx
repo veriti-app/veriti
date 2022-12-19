@@ -88,7 +88,7 @@ const Card = () => {
         </select>
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="flex flex-row flex-wrap justify-center justify-between space-y-6">
         {/* Filter Applied */}
         {Filter(category).map((charity) => (
           // Card
