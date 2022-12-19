@@ -37,7 +37,7 @@ const Card = () => {
 
   return (
     <div>
-      <div className="flex flex-row flex-wrap justify-center justify-between space-y-4">
+      <div className=" flex flex-row flex-wrap gap-8 content-center">
         {/* Filter Applied */}
         {charities.map((charity) => (
           // Card
@@ -45,7 +45,7 @@ const Card = () => {
             type="card"
             data-modal-toggle="defaultModal"
             key={charity._id}
-            className="max-w-sm w-90 rounded overflow-hidden shadow-lg rounded-lg"
+            className="max-w-sm w-96 overflow-hidden shadow-lg rounded-lg"
           >
             {/* Image */}
             <img
@@ -55,22 +55,24 @@ const Card = () => {
               alt=""
             />
             {/* Text */}
-            <div className="p-4">
-              <h5 className="mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                {charity.name}
-              </h5>
-              <a
-                href={charity.link}
-                className="font-normal text-indigo-400 dark:text-gray-400"
-              >
-                Visit Site
-              </a>
-              <p className="font-normal text-xs text-gray-700 dark:text-gray-400">
-                EIN: {charity.ein}
-              </p>
-              <p className="font-normal text-xs text-gray-700 dark:text-gray-400">
-                {charity.location}
-              </p>
+            <div className="p-4 h-80 flex flex-col justify-between">
+              <div>
+                <h5 className="flex flex-wrap mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {charity.name}
+                </h5>
+                <a
+                  href={charity.link}
+                  className="font-normal text-indigo-400 dark:text-gray-400"
+                >
+                  Visit Site
+                </a>
+                <p className="font-normal text-xs text-gray-700 dark:text-gray-400">
+                  EIN: {charity.ein}
+                </p>
+                <p className="font-normal text-xs text-gray-700 dark:text-gray-400">
+                  {charity.location}
+                </p>
+              </div>
               {/* CTAs */}
               <div className="flex flex-row py-2">
                 {/* Save Button */}
