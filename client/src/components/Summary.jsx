@@ -26,7 +26,7 @@ const Summary = () => {
         Summary
       </h1>
       {/* Summary */}
-      <div className="flex flex-wrap flex-col items-center md:items-start md:flex-row lg:flex-row space-x-2 gap-2">
+      <div className="flex flex-wrap flex-col items-start md:flex-row lg:flex-row space-x-2 gap-2">
         <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
           <div className="p-5">
             <a href="/">
@@ -57,7 +57,7 @@ const Summary = () => {
       </div>
 
       {/* Downloads */}
-      <div className="flex flex-col md:flex-row items-center py-2 gap-2">
+      <div className="flex flex-col md:flex-row items-start py-2 gap-2">
         <div className="max-w-sm">
           <span>
             <TaxDownload />
