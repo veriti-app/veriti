@@ -4,6 +4,7 @@ import { QUERY_ME, ALL_CHARITIES } from "../utils/queries";
 import { SAVE_CHARITY } from "../utils/mutations";
 import Modal from "./Modal";
 import { useMutation } from "@apollo/client";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   // Get logged in user charities
@@ -51,16 +52,17 @@ const Card = () => {
   };
 
   const handleDonation = async (event) => {
-    console.log(event.target.getAttribute("data-charityId"));
+    console.log("called", event.target.getAttribute("data-charityId"));
     // targeting the data atrribute for charityId
     let currentCharityId = event.target.getAttribute("data-charityId");
     // setting to local storage (key, value)
     localStorage.setItem("current-charity", currentCharityId);
-    window.location.replace("/donation");
+
+    //window.location.replace("/donation");
   };
 
   return (
-    <div className="justify-center">
+    <div>
       <div className="flex flex-col space-y-2 py-4">
         <label for="category" className="text-grey-600 font-medium">
           Choose a category
@@ -87,7 +89,7 @@ const Card = () => {
         </select>
       </div>
 
-      <div className="flex flex-row flex-wrap justify-center gap-8 space-y-6">
+      <div className="flex flex-row flex-wrap justify-between space-y-6">
         {/* Filter Applied */}
         {Filter(category).map((charity) => (
           // Card
@@ -95,7 +97,7 @@ const Card = () => {
             type="card"
             data-modal-toggle="defaultModal"
             key={charity._id}
-            className="max-w-sm w-96 flex flex-col justify-end overflow-hidden shadow-lg rounded-lg"
+            className="max-w-sm w-96 overflow-hidden shadow-lg rounded-lg"
           >
             {/* Image */}
             <img
@@ -105,51 +107,49 @@ const Card = () => {
               alt=""
             />
             {/* Text */}
-            <div className="p-4 h-80 flex flex-col justify-between">
-              <div>
-                <span className="self-center justify-self-auto bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
-                  {charity.categories[0].name}
-                </span>
-                <h5 className="mt-4 mb-2 text-xl md:text-2xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {charity.name}
-                </h5>
-                <a
-                  href={charity.link}
-                  className="font-normal text-indigo-400 dark:text-gray-400"
-                >
-                  Visit Site
-                </a>
-                <p className="mb-8 font-normal text-xs text-gray-700 dark:text-gray-400">
-                  EIN: {charity.ein}
-                </p>
-              </div>
+            <div className="p-4">
+              <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
+                {charity.categories[0].name}
+              </span>
+              <h5 className="mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                {charity.name}
+              </h5>
+              <a
+                href={charity.link}
+                className="font-normal text-indigo-400 dark:text-gray-400"
+              >
+                Visit Site
+              </a>
+              <p className="mb-8 font-normal text-xs text-gray-700 dark:text-gray-400">
+                EIN: {charity.ein}
+              </p>
               {/* CTAs */}
-              <div className="flex flex-col md:flex-row lg:flex-row pb-4 justify-center ">
-                <div className="flex flex-row">
-                  {/* Save Button */}
-                  <button
-                    id={charity._id}
-                    value={charity._id}
-                    name="charityId"
-                    onClick={handleSubmit}
-                    className="py-3 md:py-4 lg:py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
-                  >
-                    {/* Set value of button dynamically based on user chairity */}
-                    {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
-                  </button>
-                  {/* Data attribute data-charityId, a way to save data within elements */}
+              <div className="flex flex-row py-2">
+                {/* Save Button */}
+                <button
+                  id={charity._id}
+                  value={charity._id}
+                  name="charityId"
+                  onClick={handleSubmit}
+                  className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                >
+                  {/* Set value of button dynamically based on user chairity */}
+                  {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
+                </button>
+                {/* Data attribute data-charityId, a way to save data within elements*/}
+                {/* Added Link button to route donation page*/}
+                <Link to="/donation">
                   <button
                     onClick={handleDonation}
-                    className="py-3 md:py-4 lg:py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                    className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
                     data-charityId={charity._id}
                   >
                     Donate
                   </button>
-                </div>
+                </Link>
+
                 {/* Modal Button */}
-                <div>
-                  <Modal charityId={charity._id} />
-                </div>
+                <Modal charityId={charity._id} />
               </div>
             </div>
           </div>
