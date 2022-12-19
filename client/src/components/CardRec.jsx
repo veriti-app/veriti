@@ -39,19 +39,19 @@ const Card = () => {
   const [category, setCategory] = useState("");
 
   // Saved chairity on backaend and displayed on user portfolio
-  const handleSubmit = async (event) => {
-    // setting formstate variable
-    const { name, value } = event.target;
+  // const handleSubmit = async (event) => {
+  //   // setting formstate variable
+  //   const { name, value } = event.target;
 
-    setFormState({ ...formState, [name]: value });
-    try {
-      const chairityData = await saveCharity({
-        variables: { charityId: formState.charityId },
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //   setFormState({ ...formState, [name]: value });
+  //   try {
+  //     const chairityData = await saveCharity({
+  //       variables: { charityId: formState.charityId },
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <div>
@@ -96,19 +96,29 @@ const Card = () => {
                   id={charity._id}
                   value={charity._id}
                   name="charityId"
-                  onClick={handleSubmit}
+                  // onClick={handleSubmit}
                   className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
                 >
                   {/* Set value of button dynamically based on user chairity */}
-                  {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
+                  {/* {userCharityIdList.includes(charity._id) ? "Saved" : "Save"} */}
+                  Save
                 </button>
                 {/* TODO: Add a "donate" logic here to donate to right charity_ID */}
-                <Link
+                {/* <Link
                   to="/donation"
                   className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
                 >
                   Donate
-                </Link>
+                </Link> */}
+                <button
+                  id="donation"
+                  value={charity._id}
+                  name="chairityId"
+                  // onClick={handleDonation}
+                  className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                >
+                  Donate
+                </button>
                 {/* Modal Button */}
                 <Modal charityId={charity._id} />
               </div>
