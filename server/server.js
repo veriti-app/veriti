@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === "production") {
 // Stripe Integration
 app.get("/config", (req, res) => {
   res.send({
-    publishableKey: process.env.STRIPE_PUBLISHABLE,
+    publishableKey: `${process.env.STRIPE_PUBLISHABLE}`,
   });
 });
 
