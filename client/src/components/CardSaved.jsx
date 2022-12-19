@@ -38,7 +38,7 @@ const Card = () => {
 
   return (
     <div>
-      <div className="flex flex-row flex-wrap justify-center justify-between space-y-4">
+      <div className=" flex flex-row flex-wrap gap-8 justify-center">
         {/* Filter Applied */}
         {charities.map((charity) => (
           // Card
@@ -46,7 +46,7 @@ const Card = () => {
             type="card"
             data-modal-toggle="defaultModal"
             key={charity._id}
-            className="max-w-sm w-90 rounded overflow-hidden shadow-lg rounded-lg"
+            className="max-w-sm w-96 overflow-hidden shadow-lg rounded-lg"
           >
             {/* Image */}
             <img
@@ -56,8 +56,8 @@ const Card = () => {
               alt=""
             />
             {/* Text */}
-            <div className="p-4">
-              <h5 className="mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <div className="p-4 h-80 flex flex-col justify-between">
+              <h5 className="flex flex-wrap mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {charity.name}
               </h5>
               <a
@@ -73,32 +73,34 @@ const Card = () => {
                 {charity.location}
               </p>
               {/* CTAs */}
-              <div className="flex flex-row py-2">
-                {/* Save Button */}
-                <button
-                  id={charity._id}
-                  value={charity._id}
-                  name="charityId"
-                  onClick={handleSubmit}
-                  className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
-                >
-                  Unsave
-                </button>
-                {/* Added Link button to route donation page*/}
-                <Link to="/donation">
+              <div className="flex flex-col md:flex-row lg:flex-row pb-4 justify-center">
+                <div className="flex flex-row">
+                  {/* Save Button */}
                   <button
-                    id="donation"
+                    id={charity._id}
                     value={charity._id}
-                    name="chairityId"
-                    onClick={handleDonation}
-                    className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                    name="charityId"
+                    onClick={handleSubmit}
+                    className="py-3 md:py-4 lg:py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
                   >
-                    Donate
+                    Unsave
                   </button>
-                </Link>
+                  {/* Added Link button to route donation page*/}
+                  <Link to="/donation">
+                    <button
+                      id="donation"
+                      value={charity._id}
+                      name="chairityId"
+                      onClick={handleDonation}
+                      className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
+                    >
+                      Donate
+                    </button>
+                  </Link>
 
-                {/* Modal Button */}
-                <Modal charityId={charity._id} />
+                  {/* Modal Button */}
+                  <Modal charityId={charity._id} />
+                </div>
               </div>
             </div>
           </div>
