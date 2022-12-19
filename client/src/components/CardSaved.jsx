@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME } from "../utils/queries";
 import Modal from "./Modal";
@@ -57,9 +56,6 @@ const Card = () => {
             />
             {/* Text */}
             <div className="p-4">
-              {/* <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-indigo-200 dark:text-indigo-800">
-                {charity.categories[0].name}
-              </span> */}
               <h5 className="mt-4 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 {charity.name}
               </h5>
@@ -87,7 +83,7 @@ const Card = () => {
                 >
                   Unsave
                 </button>
-                {/* TODO: Add a "donate" logic here to donate to right charity_ID */}
+
                 <button
                   id="donation"
                   value={charity._id}

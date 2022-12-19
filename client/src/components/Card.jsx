@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME, ALL_CHARITIES } from "../utils/queries";
 import { SAVE_CHARITY } from "../utils/mutations";

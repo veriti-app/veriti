@@ -12,7 +12,6 @@ const donationSchema = new Schema({
     type: Date,
     default: Date.now,
     required: true,
-    // get: (timestamp) => dateFormat(timestamp),
   },
   user: {
     type: Schema.Types.ObjectId,
