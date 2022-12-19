@@ -9,10 +9,6 @@ const CardCheckOut = () => {
   const charity = data?.charity || [];
   console.log(charity);
 
-  const handleSubmit = async (event) => {
-    //TODO: needs to capture data in localStorage and grab id from localStorage and send it to single_charity
-  };
-
   return (
     <div>
       <div className="flex flex-row flex-wrap justify-center text-black">

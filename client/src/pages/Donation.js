@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
-import CardCheckOut from "../components/CardCheckOut";
+import CardSaved from "../components/CardCheckOut";
 import { Elements } from "@stripe/react-stripe-js";
 
 
@@ -51,7 +51,7 @@ export default function Donation() {
           </form>
         </div>
         <div>
-          <CardCheckOut />
+          <CardSaved />
         </div>
       </div>
       {stripePromise && clientSecret && (
