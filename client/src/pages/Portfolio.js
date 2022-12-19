@@ -1,6 +1,8 @@
 import React from "react";
 import Summary from "../components/Summary";
 import PortfolioComp from "../components/PortfolioComp";
+import Recommendations from "../components/Recommendations";
+
 
 export default function PortfolioPage() {
   return (
@@ -15,8 +17,14 @@ export default function PortfolioPage() {
       </div>
       {/* the Recommendations component is where we populate recommended cards based on what the use saves*/}
       {/* <div>
+        <div>
+          {/* the PortfolioComp component is where we store the saved cards data to the portfolio */}
+          <PortfolioComp />
+        </div>
+        {/* the Recommendations component is where we populate recommended cards based on what the use saves*/}
+        <div>
           <Recommendations />
-        </div> */}
+        </div>
     </div>
   );
 }

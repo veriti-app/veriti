@@ -70,6 +70,25 @@ export const ALL_CHARITIES = gql`
   }
 `;
 
+export const USER_SUMMARY = gql`
+  query Me {
+    me {
+      donations {
+        donationAmount
+        charity {
+          categories {
+            _id
+          }
+        }
+      }
+      categories {
+        name
+        _id
+      }
+    }
+  }
+`;
+
 export const USER_DONATIONS = gql `
 query Query {
   me {

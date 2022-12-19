@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME, ALL_CHARITIES } from "../utils/queries";
 import { SAVE_CHARITY } from "../utils/mutations";
@@ -21,19 +22,21 @@ const Card = () => {
   const [saveCharity] = useMutation(SAVE_CHARITY);
   const [formState, setFormState] = useState({ charityId: "" });
   const { data } = useQuery(ALL_CHARITIES);
-  const charities = data?.charities || [];
-  const [category, setCategory] = useState("");
-
-  function Filter(category) {
-    if (category) {
-      let newarr = charities.filter(
-        (char) => char.categories[0].name === category
-      );
-      return newarr;
-    } else {
-      return charities;
-    }
+  var charities = data?.charities || [];
+  //Generate random 9 number from 1 to 49
+  var arr = [];
+  while (arr.length < 9) {
+    var r = Math.floor(Math.random() * 49);
+    if (arr.indexOf(r) === -1) arr.push(r);
   }
+  // Filterd random 9 chairities from 49
+  var filterCharities = [];
+  arr.forEach(myFunction);
+  function myFunction(arrIndex) {
+    filterCharities.push(charities[arrIndex]);
+  }
+
+  const [category, setCategory] = useState("");
 
   // Saved chairity on backaend and displayed on user portfolio
   const handleSubmit = async (event) => {
@@ -50,52 +53,17 @@ const Card = () => {
     }
   };
 
-  const handleDonation = async (event) => {
-    console.log(event.target.getAttribute("data-charityId"));
-    // targeting the data atrribute for charityId
-    let currentCharityId = event.target.getAttribute("data-charityId");
-    // setting to local storage (key, value)
-    localStorage.setItem("current-charity", currentCharityId);
-    window.location.replace("/donation");
-  };
-
   return (
     <div>
-      <div className="flex flex-col space-y-2 py-4">
-        <label for="category" className="text-grey-600 font-medium">
-          Choose a category
-        </label>
-        <select
-          onChange={(event) => setCategory(event.target.value)}
-          name="category"
-          id="category"
-          className="rounded-lg bg-white text-indigo-700 font-bold"
-        >
-          <option value="">All</option>
-          <option value="Healthcare">Healthcare</option>
-          <option value="Disaster Relief">Disaster Relief</option>
-          <option value="Environment">Environment</option>
-          <option value="LGBTQ+">LGBTQ+</option>
-          <option value="Animal Welfare">Animal Welfare</option>
-          <option value="Education Services">Education Services</option>
-          <option value="Social/Human Rights">Social/Human Rights</option>
-          <option value="Legal Services">Legal Services</option>
-          <option value="Economic Development">Economic Development</option>
-          <option value="Mental Healthcare">Mental Healthcare</option>
-          <option value="Refugees/Immigration">Refugees/Immigration</option>
-          <option value="Public Safety">Public Safety</option>
-        </select>
-      </div>
-
-      <div className="flex flex-row flex-wrap justify-center justify-between space-y-6">
-        {/* Filter Applied */}
-        {Filter(category).map((charity) => (
+      <div className="flex flex-row flex-wrap justify-center justify-between space-y-4">
+        {/* use map loop for chairities */}
+        {filterCharities.map((charity) => (
           // Card
           <div
             type="card"
             data-modal-toggle="defaultModal"
             key={charity._id}
-            className="max-w-sm w-96 overflow-hidden shadow-lg rounded-lg"
+            className="max-w-sm w-96 rounded overflow-hidden shadow-lg rounded-lg"
           >
             {/* Image */}
             <img
@@ -134,14 +102,13 @@ const Card = () => {
                   {/* Set value of button dynamically based on user chairity */}
                   {userCharityIdList.includes(charity._id) ? "Saved" : "Save"}
                 </button>
-                {/* Data attribute data-charityId, a way to save data within elements */}
-                <button
-                  onClick={handleDonation}
+                {/* TODO: Add a "donate" logic here to donate to right charity_ID */}
+                <Link
+                  to="/donation"
                   className="py-4 px-5 mr-2 mb-2 text-sm font-medium text-white focus:outline-none bg-indigo-700 rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-indigo-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-indigo-700 dark:hover:bg-gray-700"
-                  data-charityId={charity._id}
                 >
                   Donate
-                </button>
+                </Link>
                 {/* Modal Button */}
                 <Modal charityId={charity._id} />
               </div>

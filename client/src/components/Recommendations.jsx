@@ -1,22 +1,23 @@
+// Math.floor(Math.random() * 1000)
 import React from "react";
-import CardNoCTA from "./CardNoCTA";
+import CardRec from "./CardRec";
+import { QUERY_ME, ALL_CHARITIES } from "../utils/queries";
+import { useQuery } from "@apollo/client";
+const saveButton = document.getElementsByClassName("saveButton")
 
 const Recommendations = () => {
   // {/* TODO: Add Recommended cards logic here */}
-  // function RecoList() {}
+  const { data } = useQuery(QUERY_ME);
+  const {data: allCharities } = useQuery(ALL_CHARITIES);
+  const savedCharities = data.me?.charities || [];
+  console.log(savedCharities)
+  
+
   return (
-    <div
-      class="flex flex-row flex-wrap justify-center space-x-4 py-4"
-      type="card"
-    >
-      <div className="flex flex-row flex-wrap">
-        <h1 className="my-2 p-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Your Recommendations
-        </h1>
-        {/* Placeholder */}
-        <CardNoCTA />
+    <div className="rounded-lg px-4">
+        <h1 className="mt-10 py-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Your Recommendations</h1>
+        <CardRec />
       </div>
-    </div>
   );
 };
 
